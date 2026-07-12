@@ -1,0 +1,516 @@
+{
+  "versao": "0.3",
+  "data": "2026-07-12",
+  "total": 22,
+  "grupos": {
+    "ATN": "Atenção — consegue manter o foco até o fim?",
+    "EXE": "Função executiva — consegue organizar, planejar, monitorar?",
+    "LIN": "Linguagem — entende o que está sendo pedido?",
+    "SEN": "Sensorial — o formato da folha atrapalha?",
+    "REG": "Regulação — o contexto de prova o desorganiza?",
+    "MOT": "Registro — consegue registrar a resposta que já sabe?"
+  },
+  "guardrails_deterministicos": [
+    {
+      "id": "G1",
+      "regra": "NUNCA quebrar página entre o texto-base e suas perguntas, nem entre a questão, suas alternativas e o espaço de resposta. O bloco é indivisível.",
+      "origem": "REG-01 — precedência sobre '1 questão por página' (ATN-01).",
+      "tipo": "layout"
+    },
+    {
+      "id": "G2",
+      "regra": "Destaque de comando: caixa alta + fundo cinza 10% + borda. Nunca cor saturada. Nunca empilhar todos os destaques ao mesmo tempo.",
+      "origem": "SEN-02 + SEN-02b",
+      "tipo": "layout"
+    },
+    {
+      "id": "G3",
+      "regra": "Sinônimo permitido apenas quando SIMPLIFICA (outro caminho para o mesmo sentido). Proibido sinônimo que amplia vocabulário.",
+      "origem": "LIN-01",
+      "tipo": "conteudo"
+    },
+    {
+      "id": "G4",
+      "regra": "Pictograma permitido APENAS em verbo de comando ou substantivo concreto. BLOQUEAR pictograma cuja contagem/leitura entregue a resposta da questão.",
+      "origem": "SEN-04",
+      "tipo": "conteudo"
+    },
+    {
+      "id": "G5",
+      "regra": "Se o código BNCC da questão for de PRODUÇÃO DE TEXTO ESCRITO, bloquear resposta_oral_transcrita e simplificacao_de_texto. Adaptar por estrutura direcionada.",
+      "origem": "MOT-01 + LIN-01",
+      "tipo": "conteudo"
+    },
+    {
+      "id": "G6",
+      "regra": "Borda funcional (delimita área) é permitida. Moldura ornamental é proibida.",
+      "origem": "SEN-01",
+      "tipo": "layout"
+    }
+  ],
+  "pendencias_f0": [
+    "fonte_id de cada barreira — parecer técnico assinado pela pedagoga (ela confirmou que assina as 22)",
+    "VERIFICAR: uso de dicionário em prova é garantido por lei? (levantado pela pedagoga)",
+    "UI: ~8 barreiras por criança → lista de 22 checkboxes não serve. Agrupar por família."
+  ],
+  "barreiras": [
+    {
+      "codigo": "ATN-01",
+      "grupo": "ATN",
+      "nome_curto": "Perde foco em folha densa",
+      "pergunta_gatilho": "Ele trava quando a folha tem muita coisa?",
+      "tecnicas_indicadas": [
+        "margens_amplas",
+        "borda_funcional_delimitadora",
+        "densidade_reduzida"
+      ],
+      "tecnicas_contraindicadas": [
+        "prova_em_blocos"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "ATN-02",
+      "grupo": "ATN",
+      "nome_curto": "Não sustenta atenção em texto longo",
+      "pergunta_gatilho": "Ele desiste no meio do enunciado?",
+      "tecnicas_indicadas": [
+        "enunciado_max_2_frases",
+        "comando_destacado",
+        "texto_apoio_curto_por_questao"
+      ],
+      "tecnicas_contraindicadas": [
+        "narrativa_longa",
+        "texto_base_extenso"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "ATN-03",
+      "grupo": "ATN",
+      "nome_curto": "Perde-se entre questão e alternativas",
+      "pergunta_gatilho": "Ele responde a alternativa da questão errada?",
+      "tecnicas_indicadas": [
+        "alternativas_ao_lado",
+        "caixa_por_questao"
+      ],
+      "tecnicas_contraindicadas": [
+        "alternativas_em_quadro_isolado"
+      ],
+      "sugerida_por": [
+        "TDAH"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "EXE-01",
+      "grupo": "EXE",
+      "nome_curto": "Não sabe onde parou",
+      "pergunta_gatilho": "Ele pula questões sem perceber?",
+      "tecnicas_indicadas": [
+        "checklist_progresso"
+      ],
+      "tecnicas_contraindicadas": [],
+      "sugerida_por": [
+        "TDAH"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "EXE-02",
+      "grupo": "EXE",
+      "nome_curto": "Não decompõe tarefa multi-etapa",
+      "pergunta_gatilho": "Ele faz só a primeira parte do que foi pedido?",
+      "tecnicas_indicadas": [
+        "instrucao_passo_a_passo_numerada"
+      ],
+      "tecnicas_contraindicadas": [
+        "comando_composto"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "EXE-03",
+      "grupo": "EXE",
+      "nome_curto": "Não inicia sem comando explícito",
+      "pergunta_gatilho": "Ele fica parado esperando alguém mandar começar?",
+      "tecnicas_indicadas": [
+        "verbo_comando_isolado",
+        "tarja_comando",
+        "instrucao_inicio_explicita"
+      ],
+      "tecnicas_contraindicadas": [
+        "enunciado_inicia_por_contexto"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "EXE-03b",
+      "grupo": "EXE",
+      "nome_curto": "Inicia impulsivamente, sem ler o comando",
+      "pergunta_gatilho": "Ele sai fazendo antes de ler o que foi pedido?",
+      "tecnicas_indicadas": [
+        "comando_antes_do_contexto",
+        "caixa_pare_e_leia",
+        "contexto_ancora_tarefa"
+      ],
+      "tecnicas_contraindicadas": [
+        "enunciado_longo_antes_do_comando"
+      ],
+      "sugerida_por": [
+        "TDAH"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "EXE-04",
+      "grupo": "EXE",
+      "nome_curto": "Não organiza cálculo no espaço",
+      "pergunta_gatilho": "A conta some na margem?",
+      "tecnicas_indicadas": [
+        "quadriculado_dimensionado"
+      ],
+      "tecnicas_contraindicadas": [
+        "espaco_branco_livre"
+      ],
+      "sugerida_por": [
+        "TDAH"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-01",
+      "grupo": "LIN",
+      "nome_curto": "Vocabulário fora do repertório vira barreira",
+      "pergunta_gatilho": "Ele erra por não entender a palavra, não a conta?",
+      "tecnicas_indicadas": [
+        "campo_semantico",
+        "sinonimo_simplificador"
+      ],
+      "tecnicas_contraindicadas": [
+        "sinonimo_enriquecedor"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-02",
+      "grupo": "LIN",
+      "nome_curto": "Interpreta linguagem literalmente",
+      "pergunta_gatilho": "Ele leva metáfora ao pé da letra?",
+      "tecnicas_indicadas": [
+        "frase_direta",
+        "sem_linguagem_figurada"
+      ],
+      "tecnicas_contraindicadas": [
+        "expressao_idiomatica",
+        "ironia"
+      ],
+      "sugerida_por": [
+        "TEA_N1",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-03",
+      "grupo": "LIN",
+      "nome_curto": "Contexto narrativo obstrui a habilidade",
+      "pergunta_gatilho": "A história atrapalha em vez de ajudar?",
+      "tecnicas_indicadas": [
+        "enunciado_curto_objetivo",
+        "sem_cenario_narrativo"
+      ],
+      "tecnicas_contraindicadas": [
+        "narrativa"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-04",
+      "grupo": "LIN",
+      "nome_curto": "Não decodifica comando com dupla negativa",
+      "pergunta_gatilho": "Ele erra em 'assinale a incorreta'?",
+      "tecnicas_indicadas": [
+        "comando_afirmativo"
+      ],
+      "tecnicas_contraindicadas": [
+        "dupla_negativa",
+        "exceto",
+        "nao_e"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-05",
+      "grupo": "LIN",
+      "nome_curto": "Precisa de mediação oral",
+      "pergunta_gatilho": "Ele entende se alguém lê?",
+      "tecnicas_indicadas": [
+        "roteiro_do_ledor"
+      ],
+      "tecnicas_contraindicadas": [
+        "questao_ampla_escopo_aberto"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "LIN-06",
+      "grupo": "LIN",
+      "nome_curto": "Engaja mais em contexto de interesse restrito",
+      "pergunta_gatilho": "Ele acorda quando é dinossauro?",
+      "tecnicas_indicadas": [
+        "reescrita_no_interesse_cadastrado"
+      ],
+      "tecnicas_contraindicadas": [
+        "interesse_como_enfeite"
+      ],
+      "sugerida_por": [
+        "TEA_N1",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "SEN-01",
+      "grupo": "SEN",
+      "nome_curto": "Poluição visual desorganiza",
+      "pergunta_gatilho": "Ele se perde na folha cheia?",
+      "tecnicas_indicadas": [
+        "espaco_em_branco",
+        "borda_simples_funcional"
+      ],
+      "tecnicas_contraindicadas": [
+        "pictograma_decorativo",
+        "moldura_ornamental"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "SEN-02",
+      "grupo": "SEN",
+      "nome_curto": "Hipersensibilidade a cor saturada",
+      "pergunta_gatilho": "Cor forte incomoda?",
+      "tecnicas_indicadas": [
+        "fundo_cinza_10",
+        "borda_grossa"
+      ],
+      "tecnicas_contraindicadas": [
+        "tarja_amarela",
+        "cor_saturada"
+      ],
+      "sugerida_por": [
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "SEN-02b",
+      "grupo": "SEN",
+      "nome_curto": "Precisa de destaque tipográfico para localizar o comando",
+      "pergunta_gatilho": "Ele não acha o que é para fazer na folha?",
+      "tecnicas_indicadas": [
+        "negrito",
+        "caixa_alta",
+        "caixa_em_volta"
+      ],
+      "tecnicas_contraindicadas": [
+        "empilhar_todos_destaques"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "SEN-03",
+      "grupo": "SEN",
+      "nome_curto": "Dificuldade de rastreio de linha",
+      "pergunta_gatilho": "Ele pula linha ao ler?",
+      "tecnicas_indicadas": [
+        "entrelinha_1_5",
+        "fonte_16_min"
+      ],
+      "tecnicas_contraindicadas": [
+        "texto_coluna_dupla"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N1"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "SEN-04",
+      "grupo": "SEN",
+      "nome_curto": "Apoia-se em pictograma para ancorar sentido",
+      "pergunta_gatilho": "Imagem ajuda ele a entender?",
+      "tecnicas_indicadas": [
+        "pictograma_verbo_comando",
+        "pictograma_substantivo_concreto"
+      ],
+      "tecnicas_contraindicadas": [
+        "pictograma_abstrato",
+        "pictograma_que_entrega_resposta"
+      ],
+      "sugerida_por": [
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "depende",
+      "fonte_id": null,
+      "ativa": true,
+      "nota": "Pictograma no VERBO DE COMANDO ou substantivo concreto = ACESSO. Pictograma que representa a RESPOSTA (ex.: 3 galinhas + 2 patos ao lado de '3+2') = SIGNIFICATIVA — a criança conta a figura em vez de somar. Guardrail G4."
+    },
+    {
+      "codigo": "REG-01",
+      "grupo": "REG",
+      "nome_curto": "Prova longa gera desregulação",
+      "pergunta_gatilho": "Ele desaba na metade?",
+      "tecnicas_indicadas": [
+        "fracionar_prova",
+        "menos_questoes_por_pagina",
+        "comando_curto",
+        "questao_ludica_intervalo"
+      ],
+      "tecnicas_contraindicadas": [
+        "quebra_pagina_entre_texto_base_e_perguntas"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "REG-02",
+      "grupo": "REG",
+      "nome_curto": "Imprevisibilidade gera ansiedade",
+      "pergunta_gatilho": "Ele precisa saber o que vem?",
+      "tecnicas_indicadas": [
+        "sumario_no_topo",
+        "numero_questoes_visivel"
+      ],
+      "tecnicas_contraindicadas": [
+        "surpresa_de_formato"
+      ],
+      "sugerida_por": [
+        "TEA_N1",
+        "TEA_N2",
+        "TEA_N3"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true
+    },
+    {
+      "codigo": "MOT-01",
+      "grupo": "MOT",
+      "nome_curto": "Escrita manual custa mais que a habilidade",
+      "pergunta_gatilho": "Ele sabe mas não escreve?",
+      "tecnicas_indicadas": [
+        "resposta_por_marcacao",
+        "caixa_delimita_inicio_e_fim",
+        "resposta_oral_transcrita"
+      ],
+      "tecnicas_contraindicadas": [
+        "resposta_dissertativa_longa",
+        "linha_simples"
+      ],
+      "sugerida_por": [
+        "TDAH",
+        "TEA_N2"
+      ],
+      "classificacao": "acesso",
+      "fonte_id": null,
+      "ativa": true,
+      "nota": "resposta_oral_transcrita é ACESSO exceto quando a habilidade BNCC avaliada for PRODUÇÃO DE TEXTO ESCRITO — nesse caso, adaptar por estrutura direcionada (parágrafo guiado, opções fechadas), nunca por transcrição. Guardrail G5."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# ═══ SEGREDOS — nunca commitar ═══
+.env
+.env.local
+.env*.local
+*.pem
+*.key
+
+# ═══ CÉREBRO DO PROJETO — fica fora do Git ═══
+# Planilhas de trabalho, respostas da pedagoga, rascunhos.
+# Repositório privado hoje vira público um dia.
+_cerebro/
+*.xlsx
+*.xls
+
+# ═══ Node / Next ═══
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ═══ Vercel / Supabase ═══
+.vercel
+supabase/.temp/
+supabase/.branches/
+
+# ═══ Sistema ═══
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.vscode/*
+!.vscode/settings.json
