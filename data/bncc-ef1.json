@@ -1,0 +1,3078 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa + Matemática — 1º ao 5º ano",
+  "total": 244,
+  "habilidades": [
+    {
+      "codigo": "EF01MA01",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Contagem de rotina; Contagem ascendente e descendente",
+      "descricao": "Utilizar números naturais como indicador de quantidade ou de ordem em diferentes situações cotidianas e reconhecer situações em que os números não indicam contagem nem ordem, mas sim código de identificação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso e função do número natural"
+    },
+    {
+      "codigo": "EF01MA02",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Contagem de rotina; Contagem ascendente e descendente",
+      "descricao": "Contar de maneira exata ou aproximada, utilizando diferentes estratégias como o pareamento e outros agrupamentos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "contagem com estratégias"
+    },
+    {
+      "codigo": "EF01MA03",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Reconhecimento de números no contexto diário; Ordenação de números",
+      "descricao": "Estimar e comparar quantidades de objetos de dois conjuntos (tem mais, tem menos ou tem a mesma quantidade), com e sem correspondência um a um, e indicar o maior, utilizando a linguagem: mais ou menos que, maior ou menor que.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "comparação e estimativa de quantidades"
+    },
+    {
+      "codigo": "EF01MA04",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Reconhecimento de números no contexto diário; Ordenação de números",
+      "descricao": "Contar a quantidade de objetos de coleções até 20 unidades e indicar o resultado da contagem pelo correspondente numeral, inclusive em contextos de adição e subtração.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "contagem e representação numérica até 20"
+    },
+    {
+      "codigo": "EF01MA05",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Sistema de numeração decimal: agrupamentos e trocas, representação",
+      "descricao": "Comparar números naturais de até dois algarismos em situações cotidianas, com e sem suporte da reta numérica.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "comparação de números até dois algarismos"
+    },
+    {
+      "codigo": "EF01MA06",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Construção de fatos básicos da adição",
+      "descricao": "Construir fatos básicos da adição e utilizá-los em procedimentos de cálculo para resolver problemas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "fatos básicos da adição"
+    },
+    {
+      "codigo": "EF01MA07",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Composição e decomposição de números naturais",
+      "descricao": "Compor e decompor número de até dois algarismos, utilizando diferentes adições.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "composição e decomposição até dois algarismos"
+    },
+    {
+      "codigo": "EF01MA08",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas envolvendo diferentes significados da adição e da subtração",
+      "descricao": "Resolver e elaborar problemas de adição e de subtração, envolvendo números de até dois algarismos, com os significados de juntar, acrescentar, separar e retirar, com o suporte de imagens e/ou material manipulável, utilizando estratégias e formas de registro pessoais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "resolução de problemas de adição e subtração"
+    },
+    {
+      "codigo": "EF01MA09",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Padrões figurais e numéricos: identificação e extensão de padrões",
+      "descricao": "Organizar e ordenar objetos familiares ou representações por figuras, por critérios e atributos definidos coletivamente.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "organização por critérios e atributos"
+    },
+    {
+      "codigo": "EF01MA10",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Padrões figurais e numéricos: identificação e extensão de padrões",
+      "descricao": "Descrever, após o reconhecimento e a explicitação de um padrão (ou regularidade), os elementos ausentes em sequências repetitivas e/ou recursivas de números naturais, objetos ou figuras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de padrão e regularidade"
+    },
+    {
+      "codigo": "EF01MA11",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas espaciais: reconhecimento e relações com objetos do mundo físico",
+      "descricao": "Identificar e nomear figuras planas (círculo, quadrado, retângulo e triângulo) em desenhos apresentados em diferentes disposições ou em faces de sólidos geométricos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de figuras planas"
+    },
+    {
+      "codigo": "EF01MA12",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Localização e movimentação: representação de espaço",
+      "descricao": "Descrever a localização de pessoas e de objetos no espaço em relação à sua própria posição, utilizando termos como à direita, à esquerda, em frente, atrás.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "localização espacial com referencial"
+    },
+    {
+      "codigo": "EF01MA13",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Comprimento, massa, capacidade: comparações e unidades de medida não convencionais",
+      "descricao": "Relatar em linguagem verbal ou não verbal sequência de acontecimentos relativos a um dia, utilizando, quando possível, os horários dos eventos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "sequência temporal de acontecimentos"
+    },
+    {
+      "codigo": "EF01MA14",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Comprimento, massa, capacidade: comparações e unidades de medida não convencionais",
+      "descricao": "Comparar comprimentos, capacidades ou massas, utilizando termos como mais alto, mais baixo, mais comprido, mais curto, mais grosso, mais fino, mais largo, mais pesado, mais leve, cabe mais, cabe menos, entre outros, para ordenar objetos de uma coleção.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "comparação de grandezas com linguagem informal"
+    },
+    {
+      "codigo": "EF01MA15",
+      "ano": 1,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Leitura de tabelas e de gráficos de colunas",
+      "descricao": "Classificar e organizar dados coletados sobre o ambiente e atividades dos colegas em listas, tabelas e gráficos de colunas simples, com e sem o uso de tecnologias digitais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "organização e representação de dados"
+    },
+    {
+      "codigo": "EF02MA01",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Contagem ascendente e descendente; Leitura, escrita, comparação e ordenação de números",
+      "descricao": "Comparar e ordenar números naturais (até a ordem das centenas) pela compreensão de características do sistema de numeração decimal (valor posicional e papel do zero).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "valor posicional e ordenação até centenas"
+    },
+    {
+      "codigo": "EF02MA02",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Composição e decomposição de números naturais",
+      "descricao": "Fazer estimativas de quantidades e confirmar por meio de contagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "estimativa e confirmação por contagem"
+    },
+    {
+      "codigo": "EF02MA03",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Construção de fatos básicos da adição e subtração",
+      "descricao": "Construir e utilizar fatos básicos da adição e da subtração para o cálculo mental e escrito.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "fatos básicos de adição e subtração"
+    },
+    {
+      "codigo": "EF02MA04",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Composição e decomposição de números naturais",
+      "descricao": "Compor e decompor números naturais de até três ordens, com suporte de material manipulável, por meio de diferentes adições.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "composição e decomposição até três ordens"
+    },
+    {
+      "codigo": "EF02MA05",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas envolvendo diferentes significados da adição e da subtração",
+      "descricao": "Resolver e elaborar problemas de adição e subtração, envolvendo números de até três ordens, com os significados de juntar, acrescentar, separar, retirar, utilizando estratégias pessoais ou convencionais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "resolução de problemas de adição e subtração até centenas"
+    },
+    {
+      "codigo": "EF02MA06",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas envolvendo diferentes significados da adição e da subtração",
+      "descricao": "Resolver e elaborar problemas envolvendo adição de parcelas iguais (multiplicação).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "introdução à multiplicação como adição de parcelas iguais"
+    },
+    {
+      "codigo": "EF02MA07",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Padrões figurais e numéricos: identificação, extensão e criação de padrões",
+      "descricao": "Descrever, após o reconhecimento e a explicitação de um padrão (ou regularidade), os elementos ausentes em sequências repetitivas e/ou recursivas de números naturais, objetos ou figuras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "padrões em sequências numéricas e figurais"
+    },
+    {
+      "codigo": "EF02MA08",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Soluções de problemas; Propriedades da igualdade",
+      "descricao": "Resolver e elaborar problemas de adição e subtração com os significados de juntar, acrescentar, comparar e completar quantidades, utilizando estratégias pessoais ou convencionais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "resolução de problemas com diferentes significados"
+    },
+    {
+      "codigo": "EF02MA09",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas planas: reconhecimento, representações, planificações e características",
+      "descricao": "Identificar e nomear figuras planas (círculo, quadrado, retângulo e triângulo) por meio de características comuns, em desenhos apresentados em diferentes disposições ou em faces de sólidos geométricos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de figuras planas por características"
+    },
+    {
+      "codigo": "EF02MA10",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Localização e movimentação: representação de espaço e tempo",
+      "descricao": "Descrever a localização e movimentação de objetos no espaço, usando termos como dentro, fora, entre, acima, abaixo, à direita, à esquerda das referências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "localização e movimentação espacial"
+    },
+    {
+      "codigo": "EF02MA11",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de comprimento, massa, capacidade e temperatura: unidades não convencionais e convencionais",
+      "descricao": "Estimar, medir e comparar comprimentos de objetos, utilizando unidades de medida não padronizadas e padronizadas (metro, centímetro) e instrumentos de medida.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "medição de comprimento com unidades convencionais"
+    },
+    {
+      "codigo": "EF02MA12",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Sistema monetário brasileiro",
+      "descricao": "Reconhecer e relacionar valores de moedas e cédulas do sistema monetário brasileiro para resolver situações simples do cotidiano do estudante.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "sistema monetário e situações cotidianas"
+    },
+    {
+      "codigo": "EF02MA13",
+      "ano": 2,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Leitura e elaboração de tabelas e de gráficos de colunas simples",
+      "descricao": "Realizar pesquisa, envolvendo até duas variáveis categóricas de seu interesse e universo, e organizar dados coletados por meio de representações como tabelas e gráficos de colunas simples, com e sem uso de tecnologias digitais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "coleta e organização de dados em tabelas e gráficos"
+    },
+    {
+      "codigo": "EF03MA01",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Leitura, escrita, comparação e ordenação de números naturais de quatro ordens",
+      "descricao": "Ler, escrever e comparar números naturais de até a ordem do milhar, estabelecendo relações entre os registros numéricos e em língua materna.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura e escrita de números até o milhar"
+    },
+    {
+      "codigo": "EF03MA02",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Composição e decomposição de números naturais",
+      "descricao": "Identificar características do sistema de numeração decimal, utilizando a composição e a decomposição de números naturais de até quatro ordens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "valor posicional e decomposição até milhar"
+    },
+    {
+      "codigo": "EF03MA03",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Construção de fatos básicos da adição, subtração e multiplicação",
+      "descricao": "Construir e utilizar fatos básicos da adição e da multiplicação para o cálculo mental e escrito.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "fatos básicos de adição e multiplicação"
+    },
+    {
+      "codigo": "EF03MA04",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Cálculo de adições e subtrações; Estratégias de cálculo",
+      "descricao": "Estabelecer a relação entre números naturais e pontos da reta numérica para realizar adições e subtrações.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reta numérica e operações"
+    },
+    {
+      "codigo": "EF03MA05",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas envolvendo diferentes significados da adição e subtração; Problemas de multiplicação e divisão",
+      "descricao": "Utilizar diferentes procedimentos de cálculo mental e escrito para resolver problemas significativos envolvendo adição e subtração com números naturais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "resolução de problemas de adição e subtração até milhar"
+    },
+    {
+      "codigo": "EF03MA06",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas de multiplicação e divisão",
+      "descricao": "Resolver e elaborar problemas de multiplicação (por 2, 3, 4, 5 e 10) com os significados de adição de parcelas iguais e elementos apresentados em disposição retangular, utilizando estratégias pessoais ou convencionais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "multiplicação com significado e estratégias"
+    },
+    {
+      "codigo": "EF03MA07",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas de multiplicação e divisão",
+      "descricao": "Resolver e elaborar problemas de divisão de um número natural por outro (até 10), com resto zero, com os significados de repartição equitativa e de medida, utilizando estratégias pessoais ou convencionais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "divisão exata com significado"
+    },
+    {
+      "codigo": "EF03MA08",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Padrões figurais e numéricos: identificação, extensão e criação de padrões",
+      "descricao": "Identificar regularidades em sequências ordenadas de números naturais resultantes das operações de adição e subtração e descrever uma regra de formação de sequências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "regularidade em sequências numéricas"
+    },
+    {
+      "codigo": "EF03MA09",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Soluções de problemas; Propriedades da igualdade",
+      "descricao": "Identificar propriedades da igualdade (identidade multiplicativa e aditiva e zero como elemento neutro da adição), em atividades de resolução de problemas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "propriedades da igualdade em operações"
+    },
+    {
+      "codigo": "EF03MA10",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas planas: características",
+      "descricao": "Identificar quadriláteros observando a existência ou não de ângulos retos e a presença de lados iguais e paralelos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de quadriláteros por características"
+    },
+    {
+      "codigo": "EF03MA11",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Localização e movimentação: plantas baixas e mapas",
+      "descricao": "Descrever e representar, por meio de esboços de trajetos ou de plantas baixas simples, a movimentação de pessoas ou de objetos no espaço, incluindo mudanças de direção e sentido, com base em diferentes referenciais e sem o uso de coordenadas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "representação de trajetos e plantas baixas"
+    },
+    {
+      "codigo": "EF03MA12",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de comprimento, área, massa, capacidade, tempo e temperatura",
+      "descricao": "Estimar, medir e comparar comprimentos, por meio da utilização de unidades de medida padronizadas mais usuais (metro, centímetro, milímetro) e de instrumentos de medida.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "medição de comprimento com unidades padronizadas"
+    },
+    {
+      "codigo": "EF03MA13",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de comprimento, área, massa, capacidade, tempo e temperatura",
+      "descricao": "Estimar e medir massas de objetos, por meio da utilização de unidades de medida padronizadas (quilo, grama).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "medição de massa com unidades padronizadas"
+    },
+    {
+      "codigo": "EF03MA14",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Sistema monetário brasileiro",
+      "descricao": "Identificar e utilizar cédulas e moedas do sistema monetário brasileiro em situações de compra e venda e fazer trocas de cédulas por moedas e por outras cédulas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "sistema monetário e trocas"
+    },
+    {
+      "codigo": "EF03MA15",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de tempo",
+      "descricao": "Ler horas em relógios digitais e em relógios analógicos e reconhecer a duração de intervalos de tempo em situações cotidianas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura de horas e duração de intervalos"
+    },
+    {
+      "codigo": "EF03MA16",
+      "ano": 3,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Leitura e interpretação de tabelas e gráficos",
+      "descricao": "Ler e interpretar dados apresentados em tabelas de dupla entrada e em gráficos de barras e identificar características dos dados, como o maior e o menor valor e a frequência mais alta.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e interpretação de tabelas e gráficos"
+    },
+    {
+      "codigo": "EF04MA01",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Leitura, escrita, comparação e ordenação de números naturais e números racionais",
+      "descricao": "Ler, escrever e ordenar números naturais até a ordem das centenas de milhar com compreensão das principais características do sistema de numeração decimal.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura e escrita de números até centenas de milhar"
+    },
+    {
+      "codigo": "EF04MA02",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Composição e decomposição de números naturais e racionais",
+      "descricao": "Mostrar, por meio de representações e/ou ações, que a ordem das parcelas não altera o resultado de uma adição e que a ordem dos fatores não altera o resultado de uma multiplicação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "propriedades comutativas da adição e multiplicação"
+    },
+    {
+      "codigo": "EF04MA03",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Construção de fatos básicos da multiplicação e divisão",
+      "descricao": "Resolver e elaborar problemas com números naturais envolvendo adição e subtração, utilizando estratégias diversas, como cálculo por estimativa, cálculo mental e algoritmos, e avaliar a adequação da estratégia utilizada.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "adição e subtração com estratégias diversas"
+    },
+    {
+      "codigo": "EF04MA04",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas de multiplicação e divisão",
+      "descricao": "Utilizar as relações entre adição e subtração, e entre multiplicação e divisão, para ampliar as estratégias de cálculo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação entre operações inversas"
+    },
+    {
+      "codigo": "EF04MA05",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Problemas de multiplicação e divisão",
+      "descricao": "Resolver e elaborar problemas envolvendo multiplicação (por números naturais maiores que 10) e divisão com resto, utilizando estratégias pessoais ou convencionais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "multiplicação e divisão com resto"
+    },
+    {
+      "codigo": "EF04MA06",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Representação fracionária dos números racionais",
+      "descricao": "Reconhecer as frações unitárias mais usuais (1/2, 1/3, 1/4, 1/5, 1/10 e 1/100) como unidades de medida menores do que uma unidade, utilizando a reta numérica como recurso.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "frações unitárias na reta numérica"
+    },
+    {
+      "codigo": "EF04MA07",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Representação fracionária dos números racionais",
+      "descricao": "Reconhecer que as regras do sistema de numeração decimal podem ser estendidas para a representação de números racionais, compreendendo os registros a vírgula como décimos e centésimos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "decimais como extensão do sistema decimal"
+    },
+    {
+      "codigo": "EF04MA08",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Propriedades da igualdade e noção de equivalência",
+      "descricao": "Identificar regularidades em sequências numéricas envolvendo múltiplos de números naturais e descrever uma regra de formação geral para essas sequências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "múltiplos e regularidade em sequências"
+    },
+    {
+      "codigo": "EF04MA09",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas planas e espaciais",
+      "descricao": "Reconhecer e comparar polígonos por número de vértices e de lados, e comparar quadriláteros por ângulos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação e comparação de polígonos"
+    },
+    {
+      "codigo": "EF04MA10",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Localização e movimentação: sistema de coordenadas",
+      "descricao": "Descrever, interpretar e representar a localização de objetos no plano cartesiano (1º quadrante), utilizando coordenadas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "localização no plano cartesiano"
+    },
+    {
+      "codigo": "EF04MA11",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de comprimento, área, massa, capacidade e tempo",
+      "descricao": "Medir e estimar comprimentos (incluindo perímetros), massas e capacidades, utilizando unidades de medida padronizadas mais usuais, valorizando o uso de instrumentos, como réguas e fitas métricas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "medição e estimativa com unidades padronizadas"
+    },
+    {
+      "codigo": "EF04MA12",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Medidas de área",
+      "descricao": "Resolver e elaborar problemas envolvendo situações em que seja necessário fazer conversões entre unidades de medida de comprimento (km, m, cm e mm) e de massa (t, kg e g).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conversão entre unidades de medida"
+    },
+    {
+      "codigo": "EF04MA13",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Sistema monetário",
+      "descricao": "Resolver e elaborar problemas envolvendo situações de compra e venda e formas de pagamento, utilizando termos como troco e desconto, inserindo-os no contexto do sistema monetário brasileiro.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "situações de compra, venda e troco"
+    },
+    {
+      "codigo": "EF04MA14",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Leitura e interpretação de tabelas e gráficos",
+      "descricao": "Reconhecer e ler dados em tabelas de dupla entrada, gráficos de barras, gráficos de colunas, pictogramas, identificando variáveis categóricas e numérico-discretas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de dados em diferentes tipos de gráficos"
+    },
+    {
+      "codigo": "EF04MA15",
+      "ano": 4,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Probabilidade",
+      "descricao": "Identificar, entre eventos aleatórios cotidianos, aqueles que têm maior ou menor chance de ocorrer, fazendo uso de linguagem probabilística: evento (im)possível, evento pouco ou muito provável.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "noção de probabilidade e linguagem probabilística"
+    },
+    {
+      "codigo": "EF05MA01",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Leitura, escrita, comparação e ordenação de números naturais e racionais",
+      "descricao": "Ler, escrever e ordenar números racionais na forma decimal com compreensão das principais características do sistema de numeração decimal, utilizando, como recursos, a composição e a decomposição e a reta numérica.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura e ordenação de decimais"
+    },
+    {
+      "codigo": "EF05MA02",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Representação fracionária e decimal dos números racionais",
+      "descricao": "Ler, escrever e ordenar números racionais na forma fracionária, identificando a fração como representação que pode ser associada a diferentes significados.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "frações e seus significados"
+    },
+    {
+      "codigo": "EF05MA03",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Cálculos com números naturais e racionais",
+      "descricao": "Resolver e elaborar problemas com números naturais, envolvendo as quatro operações fundamentais, com uso de estratégias diversas, como cálculo por estimativa e cálculo mental, avaliando a adequação da estratégia utilizada.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "quatro operações com estratégias diversas"
+    },
+    {
+      "codigo": "EF05MA04",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Números",
+      "objeto_conhecimento": "Cálculos com números racionais",
+      "descricao": "Resolver e elaborar problemas de adição e de subtração com números racionais na forma decimal, com os significados de juntar, acrescentar, separar e retirar, utilizando estratégias diversas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "adição e subtração com decimais"
+    },
+    {
+      "codigo": "EF05MA05",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas planas: características e elementos",
+      "descricao": "Concluir, por meio de investigações, que a relação entre o número de lados e a soma dos ângulos internos resulta no dobro de ângulos retos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "soma dos ângulos internos de polígonos"
+    },
+    {
+      "codigo": "EF05MA06",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Álgebra",
+      "objeto_conhecimento": "Propriedades da igualdade e noção de variável",
+      "descricao": "Resolver e elaborar problemas cuja conversão em sentença matemática resulte em equações do 1º grau do tipo x + a = b, por meio de estratégias e da aplicação, com compreensão, de propriedades da igualdade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "equação do 1º grau por sentença matemática"
+    },
+    {
+      "codigo": "EF05MA07",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Figuras geométricas espaciais: representação e características",
+      "descricao": "Identificar e representar, por meio de esboços, sólidos geométricos (prismas, pirâmides, cilindros, cones e esferas), relacionando-os com objetos do mundo físico.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de sólidos geométricos"
+    },
+    {
+      "codigo": "EF05MA08",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Geometria",
+      "objeto_conhecimento": "Ampliação e redução de figuras planas em malhas quadriculadas",
+      "descricao": "Resolver e elaborar problemas de localização de objetos e de pessoas no espaço, utilizando sistemas de localização ou coordenadas geográficas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "localização com coordenadas geográficas"
+    },
+    {
+      "codigo": "EF05MA09",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Área de figuras planas",
+      "descricao": "Calcular a área de figuras planas desenhadas em malhas quadriculadas, pela contagem dos quadradinhos ou de seus meios.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "cálculo de área em malha quadriculada"
+    },
+    {
+      "codigo": "EF05MA10",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Grandezas e medidas",
+      "objeto_conhecimento": "Área e perímetro de figuras planas",
+      "descricao": "Concluir, por meio de investigações, que figuras de perímetros iguais podem ter áreas diferentes e que figuras com a mesma área podem ter perímetros diferentes.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação entre área e perímetro"
+    },
+    {
+      "codigo": "EF05MA11",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Espaço amostral e probabilidade",
+      "descricao": "Apresentar todos os possíveis resultados de um experimento aleatório, estimando e comparando probabilidades por meio de estratégias pessoais e uso de tecnologias digitais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "espaço amostral e estimativa de probabilidade"
+    },
+    {
+      "codigo": "EF05MA12",
+      "ano": 5,
+      "componente": "MAT",
+      "unidade_tematica": "Probabilidade e estatística",
+      "objeto_conhecimento": "Leitura, interpretação e representação de dados",
+      "descricao": "Interpretar dados estatísticos apresentados em textos, tabelas e gráficos (colunas, barras, linha e pictogramas) em diferentes contextos, verificando se os dados confirmam ou não a hipótese enunciada.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "interpretação de dados estatísticos em diferentes representações"
+    },
+    {
+      "codigo": "EF15LP01",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Reconstrução das condições de produção e recepção de textos",
+      "descricao": "Identificar a função social de textos que circulam em campos da vida social dos quais participa cotidianamente (a casa, a rua, a comunidade, a escola) e nas mídias impressa, de massa e digital, reconhecendo para que foram produzidos, onde circulam, quem os produziu e a quem se destinam.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "função social e contexto de produção de textos"
+    },
+    {
+      "codigo": "EF15LP02",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Reconstrução das condições de produção e recepção de textos",
+      "descricao": "Estabelecer expectativas em relação ao texto que vai ler (pressuposições antecipadoras dos sentidos, da forma e da função social do texto), apoiando-se em seus conhecimentos prévios sobre as condições de produção e recepção desse texto, o gênero, o suporte e o universo temático, bem como sobre saliências textuais, recursos gráficos, imagens, dados da própria obra (índice, prefácio etc.), confirmando antecipações e inferências realizadas antes e durante a leitura de textos, checando a adequação das hipóteses realizadas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "antecipação e inferência em leitura"
+    },
+    {
+      "codigo": "EF15LP03",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Reconstrução das condições de produção e recepção de textos",
+      "descricao": "Identificar o interlocutor do texto lido, o assunto/tema tratado, inferindo o propósito comunicativo e a perspectiva do autor.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de interlocutor, tema e propósito comunicativo"
+    },
+    {
+      "codigo": "EF15LP04",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar o efeito de sentido produzido pelo uso de recursos expressivos gráfico-visuais em textos multissemióticos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "efeitos de sentido em textos multissemióticos"
+    },
+    {
+      "codigo": "EF15LP05",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Planejar, com a ajuda do professor, o texto que será produzido, considerando a situação comunicativa, os interlocutores (quem escreve e para quem escreve); a finalidade ou o propósito (escrever para quê); a circulação (onde o texto vai circular); o suporte (qual é o portador do texto); a linguagem, organização e forma do texto e seu tema, pesquisando em meios impressos ou digitais, sempre que for preciso, informações necessárias à produção do texto, organizando em tópicos os dados e as fontes pesquisadas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "planejamento de produção textual"
+    },
+    {
+      "codigo": "EF15LP06",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Planejamento de texto",
+      "descricao": "Reler e revisar o texto produzido com a ajuda do professor e a colaboração dos colegas, para corrigi-lo e aprimorá-lo, fazendo cortes, acréscimos, reformulações, correções de ortografia e pontuação.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "revisão e reescrita de texto"
+    },
+    {
+      "codigo": "EF15LP07",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Revisão de textos",
+      "descricao": "Utilizar software, inclusive programas de edição de texto, para editar e publicar os textos produzidos, explorando os recursos multissemióticos disponíveis.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "edição e publicação de textos com recursos digitais"
+    },
+    {
+      "codigo": "EF15LP08",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Características da conversação espontânea",
+      "descricao": "Utilizar, ao produzir o texto, recursos de coesão pronominal (pronomes pessoais, possessivos e demonstrativos), recursos de substituição lexical (como sinônimos e expressões sinônimas) com a ajuda do professor.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "coesão e substituição lexical na produção textual"
+    },
+    {
+      "codigo": "EF15LP09",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Escuta ativa",
+      "descricao": "Expressar-se em situações de intercâmbio oral com clareza, preocupando-se em ser compreendido pelo interlocutor e usando a palavra com tom de voz audível, boa articulação e ritmo adequado.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "expressão oral com clareza e adequação"
+    },
+    {
+      "codigo": "EF15LP10",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Escutar com atenção apresentações de trabalhos realizadas por colegas, formulando perguntas pertinentes ao tema e fazendo colocações.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escuta ativa e participação em apresentações"
+    },
+    {
+      "codigo": "EF15LP11",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Reconhecer características da conversação espontânea presencial, respeitando os turnos de fala, selecionando e utilizando, durante a conversação, formas de tratamento adequadas, de acordo com a situação e a posição do interlocutor.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "turnos de fala e formas de tratamento na conversação"
+    },
+    {
+      "codigo": "EF15LP12",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Atribuir significado a aspectos não linguísticos (paralinguísticos) observados na fala, como direção do olhar, riso, choro, movimentos da cabeça (de concordância ou discordância), expressão corporal, tom de voz.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "aspectos paralinguísticos na comunicação oral"
+    },
+    {
+      "codigo": "EF15LP13",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar finalidades da interação oral em diferentes contextos comunicativos (solicitar informações, apresentar opiniões, informar, relatar experiências etc.).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "finalidades da interação oral em diferentes contextos"
+    },
+    {
+      "codigo": "EF15LP14",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição de textos",
+      "descricao": "Construir o sentido de histórias em quadrinhos e tirinhas, relacionando imagens e palavras e interpretando recursos gráficos (tipos de balões, de letras, onomatopeias).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e interpretação de HQ e tirinhas"
+    },
+    {
+      "codigo": "EF15LP15",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição de textos",
+      "descricao": "Reconhecer que os textos literários fazem parte do mundo do imaginário e apresentam uma dimensão lúdica, de encantamento, valorizando-os, em sua diversidade cultural, como patrimônio artístico da humanidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento do texto literário como patrimônio cultural"
+    },
+    {
+      "codigo": "EF15LP16",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor e, mais tarde, de maneira autônoma, textos narrativos de maior porte como contos (populares, de fadas, acumulativos, de assombração etc.) e crônicas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos narrativos"
+    },
+    {
+      "codigo": "EF15LP17",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Apreciar poemas visuais e concretos, observando efeitos de sentido criados pelo formato do texto na página, distribuição e diagramação das letras, pelas ilustrações e por outros efeitos visuais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "apreciação de poemas visuais e efeitos de sentido"
+    },
+    {
+      "codigo": "EF15LP18",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Relacionar texto com ilustrações e outros recursos gráficos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "relação entre texto e elementos gráficos"
+    },
+    {
+      "codigo": "EF15LP19",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Recontar oralmente, com e sem apoio de imagem, textos literários lidos pelo professor.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconto oral de textos literários"
+    },
+    {
+      "codigo": "EF15LP20",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor e, mais tarde, de maneira autônoma, textos narrativos de maior porte como contos (populares, de fadas, acumulativos, de assombração etc.) e crônicas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos narrativos"
+    },
+    {
+      "codigo": "EF15LP21",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Ler e compreender poemas, observando o efeito de sentido produzido pelo uso de recursos expressivos sonoros (como rimas, aliterações) e semânticos (como comparações, metáforas, personificações) e pelo uso de imagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de poemas e recursos expressivos"
+    },
+    {
+      "codigo": "EF15LP22",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Produção de textos escritos",
+      "descricao": "Criar narrativas ficcionais, com certa autonomia, utilizando detalhes descritivos, sequências de eventos e imagens apropriadas para sustentar o sentido do texto, e marcadores de tempo, espaço e de fala de personagens.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "criação de narrativas ficcionais"
+    },
+    {
+      "codigo": "EF15LP23",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Produção de textos escritos",
+      "descricao": "Criar poemas, com certa autonomia, utilizando recursos sonoros (como rimas, onomatopeias, aliterações), semânticos (como comparações, metáforas, personificações) e visuais (como diagramação, espaços, combinação de letras).",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "criação de poemas com recursos expressivos"
+    },
+    {
+      "codigo": "EF15LP24",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Produção de textos escritos",
+      "descricao": "Envolver-se em práticas de leitura literária que possibilitem o desenvolvimento do senso estético para fruição, valorizando a literatura e outras manifestações artístico-culturais como formas de acesso às dimensões lúdicas, de imaginário e encantamento, reconhecendo o potencial transformador e humanizador da experiência com a literatura.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "fruição literária e senso estético"
+    },
+    {
+      "codigo": "EF15LP25",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Compartilhar a opinião sobre textos lidos, manifestando opiniões e preferências por meio de textos orais e escritos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "expressão de opinião sobre textos lidos"
+    },
+    {
+      "codigo": "EF15LP26",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, enunciados de tarefas escolares, seguindo as instruções fornecidas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de enunciados e instruções"
+    },
+    {
+      "codigo": "EF15LP27",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, listas, agendas, calendários, avisos, convites, receitas, instruções de montagem e legendas em fotos ou ilustrações em livros didáticos, jornais e revistas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de textos utilitários do cotidiano"
+    },
+    {
+      "codigo": "EF15LP28",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, textos de divulgação científica, jornalístico-noticiosos e outros, de interesse da turma.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de textos informativos e jornalísticos"
+    },
+    {
+      "codigo": "EF15LP29",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Produzir, em colaboração com os colegas e com a ajuda do professor, (re)contagens de histórias, poemas (com e sem fins lúdicos), quadrinhos, cartazes, avisos, convites, receitas, instruções de montagem e outros gêneros do campo da vida cotidiana, considerando a situação comunicativa e o tema/assunto do texto.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos de diferentes gêneros cotidianos"
+    },
+    {
+      "codigo": "EF15LP30",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Produzir, com a ajuda do professor, notícias, álbuns noticiosos digitais, jornais radiofônicos e outros gêneros do campo jornalístico-midiático, tendo em vista as condições de produção.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos jornalísticos e midiáticos"
+    },
+    {
+      "codigo": "EF15LP31",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar, com a ajuda do professor, características dos gêneros narrativo, descritivo e injuntivo, em produções do campo das práticas de estudo e pesquisa e do campo da vida cotidiana.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de características de gêneros textuais"
+    },
+    {
+      "codigo": "EF15LP32",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar a forma de composição de listas de palavras, legendas para álbuns de fotos, cartazes comemorativos e de campanhas e listas de regras de convívio da turma.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação da forma de composição de gêneros cotidianos"
+    },
+    {
+      "codigo": "EF15LP33",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar e reproduzir, em notícias, álbuns noticiosos, jornais radiofônicos e televisivos, a forma de composição: título, data, corpo da notícia e imagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "estrutura e composição de textos jornalísticos"
+    },
+    {
+      "codigo": "EF15LP34",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar, com a ajuda do professor, a forma de composição de textos pertencentes a gêneros literários e não literários, como poemas (especialmente lúdicos), contos de fadas, fábulas, lendas, notícias, anúncios, álbuns de fotos e outros.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação da composição de gêneros literários e não literários"
+    },
+    {
+      "codigo": "EF15LP35",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar, em textos narrativos, os elementos da narrativa (fatos, personagens, espaço, tempo e narrador) e o conflito gerador do enredo e sua resolução, e a sequência lógica dos fatos em textos narrativos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "elementos da narrativa e sequência lógica"
+    },
+    {
+      "codigo": "EF15LP36",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar o tema e o propósito comunicativo de textos lidos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de tema e propósito comunicativo"
+    },
+    {
+      "codigo": "EF15LP37",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Reconhecer os recursos coesivos de determinado texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "recursos coesivos em textos"
+    },
+    {
+      "codigo": "EF15LP38",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Utilizar, ao produzir o texto, conhecimentos linguísticos e gramaticais adquiridos: ortografia, regras básicas de concordância nominal e verbal, pontuação (ponto final, ponto de exclamação, ponto de interrogação, vírgulas em enumerações).",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de conhecimentos gramaticais e ortográficos na escrita"
+    },
+    {
+      "codigo": "EF15LP39",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar a sílaba tônica em palavras da língua portuguesa.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação da sílaba tônica"
+    },
+    {
+      "codigo": "EF15LP40",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos ou na escuta de textos, palavras e expressões que indicam tempo e lugar de acontecimentos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "marcadores de tempo e lugar em textos"
+    },
+    {
+      "codigo": "EF15LP41",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Reconhecer a organização da sílaba no português brasileiro (consoante e vogal) e o padrão silábico mais frequente.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "organização silábica e padrão silábico"
+    },
+    {
+      "codigo": "EF15LP42",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar classes de palavras: substantivo, verbo, adjetivo e artigo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação de classes de palavras"
+    },
+    {
+      "codigo": "EF15LP43",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar e diferenciar, em textos, substantivos e verbos e suas funções na oração: o substantivo como o elemento que nomeia e o verbo como o elemento que indica ação, estado ou fenômeno da natureza.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "função de substantivos e verbos na oração"
+    },
+    {
+      "codigo": "EF15LP44",
+      "ano": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Escrever palavras, frases, textos curtos nas formas imprensa e cursiva.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita nas formas imprensa e cursiva"
+    },
+    {
+      "codigo": "EF35LP01",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Reconstrução das condições de produção e recepção de textos",
+      "descricao": "Ler e compreender, silenciosamente e, em seguida, em voz alta, com autonomia e fluência, textos curtos com nível de textualidade adequado.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "fluência leitora e compreensão de textos"
+    },
+    {
+      "codigo": "EF35LP02",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Selecionar livros da biblioteca e/ou do cantinho de leitura da sala de aula e criar estratégias de seleção e leitura.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "seleção autônoma de textos para leitura"
+    },
+    {
+      "codigo": "EF35LP03",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar a ideia central do texto, demonstrando compreensão global.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de ideia central e compreensão global"
+    },
+    {
+      "codigo": "EF35LP04",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Inferir informações implícitas nos textos lidos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "inferência de informações implícitas"
+    },
+    {
+      "codigo": "EF35LP05",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Usar recursos de pesquisa impressos e digitais (dicionários, livros, bibliotecas, mídias digitais), para buscar informações sobre temas de interesse.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de recursos de pesquisa impressos e digitais"
+    },
+    {
+      "codigo": "EF35LP06",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Recuperar relações entre partes de um texto, identificando substituições lexicais (de substantivos por sinônimos) ou pronominais (uso de pronomes anafóricos — pessoais, possessivos, demonstrativos) que contribuem para a continuidade do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "relações de coesão e substituição em textos"
+    },
+    {
+      "codigo": "EF35LP07",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Planejamento de texto",
+      "descricao": "Utilizar conhecimentos linguísticos e gramaticais, tais como ortografia, regras básicas de concordância nominal e verbal, pontuação (ponto final, ponto de exclamação, ponto de interrogação, vírgulas em enumerações) e pontuação do discurso direto, quando for o caso.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de conhecimentos gramaticais na produção textual"
+    },
+    {
+      "codigo": "EF35LP08",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Planejamento de texto",
+      "descricao": "Utilizar, ao produzir o texto, recursos de coesão pronominal (pronomes pessoais, possessivos e demonstrativos) e articuladores de relações de sentido (tempo, causa, oposição, conclusão, comparação), com nível adequado de informatividade.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "coesão e articulação de sentidos na produção textual"
+    },
+    {
+      "codigo": "EF35LP09",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Revisão de textos",
+      "descricao": "Organizar o texto em unidades de sentido, dividindo-o em parágrafos segundo as normas gráficas e de acordo com as características do gênero textual.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "organização em parágrafos e unidades de sentido"
+    },
+    {
+      "codigo": "EF35LP10",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Revisão de textos",
+      "descricao": "Reler e revisar o texto produzido com a ajuda do professor e a colaboração dos colegas, para corrigi-lo e aprimorá-lo, fazendo cortes, acréscimos, reformulações, correções de ortografia e pontuação.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "revisão e reescrita autônoma de texto"
+    },
+    {
+      "codigo": "EF35LP11",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Ouvir gravações, canções, textos falados em diferentes variedades linguísticas, identificando características regionais, urbanas e rurais da fala e respeitando as diversas variedades linguísticas como patrimônio cultural, bem como o valor sociocultural de cada forma de expressão.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento e respeito à variação linguística"
+    },
+    {
+      "codigo": "EF35LP12",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar os efeitos de ironia e humor em textos variados.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de ironia e humor em textos"
+    },
+    {
+      "codigo": "EF35LP13",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar características do gênero apresentação oral com apoio de material visual (slides, quadros, tabelas) a fim de utilizá-las na produção própria.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "características da apresentação oral com apoio visual"
+    },
+    {
+      "codigo": "EF35LP14",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Assistir a apresentações orais diversas, identificando a tese/opinião defendida e os argumentos e contra-argumentos utilizados.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de tese e argumentos em apresentações orais"
+    },
+    {
+      "codigo": "EF35LP15",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Opinar e defender ponto de vista sobre tema polêmico relacionado a situações vivenciadas na escola e/ou na comunidade, utilizando registro formal e estrutura adequada à argumentação, considerando a situação comunicativa e o tema/assunto do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "defesa de ponto de vista com argumentação oral"
+    },
+    {
+      "codigo": "EF35LP16",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Identificar e reproduzir, em notícias, álbuns noticiosos, jornais radiofônicos e televisivos, a forma de composição: título, data, corpo da notícia, imagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "composição e estrutura de textos noticiosos"
+    },
+    {
+      "codigo": "EF35LP17",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Relacionar textos e gêneros a seus contextos de produção e identificar finalidades e efeitos de sentido.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "relação entre gênero, contexto e finalidade"
+    },
+    {
+      "codigo": "EF35LP18",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Forma de composição dos textos",
+      "descricao": "Perceber o papel dos verbos na indicação de ações, estados e processos, e de advérbios e locuções adverbiais na indicação de circunstâncias de lugar, tempo, modo, entre outras, em textos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "função de verbos e advérbios em textos"
+    },
+    {
+      "codigo": "EF35LP19",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos ou de escuta, a presença de variedades linguísticas e demonstrar atitude respeitosa diante de variedades linguísticas, compreendendo-as como características do uso da língua por diferentes grupos regionais ou sociocultural.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "identificação e respeito à variação linguística em textos"
+    },
+    {
+      "codigo": "EF35LP20",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, o uso de conjunções que expressam relações de adição, oposição, alternância, explicação, conclusão entre partes do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "conjunções e relações de sentido em textos"
+    },
+    {
+      "codigo": "EF35LP21",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Reconhecer a estrutura básica da oração (sujeito e predicado) e identificar o sujeito de orações em textos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "estrutura da oração: sujeito e predicado"
+    },
+    {
+      "codigo": "EF35LP22",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras utilizando regras de correspondência fonema-grafema regulares e algumas irregulares.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia e correspondência fonema-grafema"
+    },
+    {
+      "codigo": "EF35LP23",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Memorizar a grafia de palavras de uso frequente nas quais as relações fonema-grafema são irregulares e palavras com dificuldades ortográficas (uso de letras maiúsculas e minúsculas como inicial de nomes próprios, início de frase e de verso; acentos gráficos e sinais de pontuação).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia de palavras de uso frequente"
+    },
+    {
+      "codigo": "EF35LP24",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Reconhecer prefixos e sufixos produtivos na formação de palavras derivadas, utilizando-os como estratégia para identificar o significado das palavras (ex.: infeliz, desaparecido, problemática).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "prefixos, sufixos e formação de palavras"
+    },
+    {
+      "codigo": "EF35LP25",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Usar o dicionário para ampliar o repertório vocabular e verificar a ortografia das palavras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso do dicionário como recurso de escrita"
+    },
+    {
+      "codigo": "EF35LP26",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, textos em versos, explorando rimas, sonoridades e jogos de palavras, identificando o eu lírico e o tema e reconhecendo a função da rima.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos em versos"
+    },
+    {
+      "codigo": "EF35LP27",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, narrativas literárias com temáticas infanto-juvenis, de autores nacionais e internacionais, verificando a sequência lógica e temporal dos fatos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de narrativas literárias"
+    },
+    {
+      "codigo": "EF35LP28",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Produzir, com autonomia, textos de diferentes gêneros e temáticas (poemas, contos, fábulas, cordéis), considerando a situação comunicativa.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos literários"
+    },
+    {
+      "codigo": "EF35LP29",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Ler e compreender textos de divulgação científica adaptados para crianças, identificando a ideia central e características do gênero.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF35LP30",
+      "ano": [
+        3,
+        4,
+        5
+      ],
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a concordância verbal (sujeito e verbo) e nominal (substantivo, artigo, adjetivo), reconhecendo sua função na construção dos sentidos do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "concordância verbal e nominal em textos"
+    },
+    {
+      "codigo": "EF01LP01",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que textos são lidos e escritos da esquerda para a direita e de cima para baixo da página.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "orientação espacial da escrita"
+    },
+    {
+      "codigo": "EF01LP02",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer a separação das palavras, na escrita, por espaços em branco.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação de palavras na escrita"
+    },
+    {
+      "codigo": "EF01LP03",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que palavras diferentes compartilham algumas letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento de letras compartilhadas entre palavras"
+    },
+    {
+      "codigo": "EF01LP04",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que a mesma letra pode ser grafada de diferentes formas (imprensa/cursiva, maiúscula/minúscula).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "variantes gráficas das letras"
+    },
+    {
+      "codigo": "EF01LP05",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer o sistema de escrita alfabética como representação dos sons da fala.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "princípio alfabético de escrita"
+    },
+    {
+      "codigo": "EF01LP06",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que o número de sílabas de uma palavra é diferente do número de letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação entre sílabas e letras"
+    },
+    {
+      "codigo": "EF01LP07",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Identificar fonemas e relacioná-los às letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação fonema-grafema"
+    },
+    {
+      "codigo": "EF01LP08",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Relacionar elementos sonoros (sílabas, fonemas, partes de palavras) com sua representação escrita.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "correspondência entre elementos sonoros e escrita"
+    },
+    {
+      "codigo": "EF01LP09",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler palavras novas com precisão na decodificação, no caso de palavras de padrão silábico canônico (consoante/vogal).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "decodificação de palavras com padrão silábico CV"
+    },
+    {
+      "codigo": "EF01LP10",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Reconhecer o sistema de numeração alfabética e a ordem do alfabeto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ordem alfabética e conhecimento do alfabeto"
+    },
+    {
+      "codigo": "EF01LP11",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Construção do sistema alfabético",
+      "descricao": "Escrever, em colaboração com os colegas e com a ajuda do professor, listas de palavras, legendas para álbuns de fotos ou ilustrações, relatos de experiências, pequenos relatos de pesquisa, entre outros, que possam ser lidos por outras pessoas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção coletiva de listas e relatos simples"
+    },
+    {
+      "codigo": "EF01LP12",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Construção do sistema alfabético",
+      "descricao": "Escrever palavras, frases e textos curtos no nível de representação em que se encontra.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita de palavras e frases no nível de representação"
+    },
+    {
+      "codigo": "EF01LP13",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e nomear as letras do alfabeto em ordem alfabética e reconhecer o uso social do alfabeto por meio de listas, dicionários e outros.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento e nomeação do alfabeto"
+    },
+    {
+      "codigo": "EF01LP14",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Distinguir, ao ouvir, sílabas e fonemas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "consciência fonológica: sílabas e fonemas"
+    },
+    {
+      "codigo": "EF01LP15",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Manipular sons das palavras orais, explorando rimas, aliterações, separação de sílabas, inversão de sílabas e palavras, substituição de sílabas e sons etc.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "manipulação de sons e consciência fonológica"
+    },
+    {
+      "codigo": "EF01LP16",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Segmentar oralmente palavras em sílabas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação silábica oral"
+    },
+    {
+      "codigo": "EF01LP17",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Comparar palavras identificando semelhanças e diferenças entre sons de sílabas iniciais, mediais e finais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "comparação de sons em sílabas de palavras"
+    },
+    {
+      "codigo": "EF01LP18",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Reconhecer a vogal como núcleo da sílaba.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "vogal como núcleo silábico"
+    },
+    {
+      "codigo": "EF01LP19",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar o número de sílabas de palavras, classificando-as em monossílabas, dissílabas, trissílabas e polissílabas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "classificação de palavras por número de sílabas"
+    },
+    {
+      "codigo": "EF01LP20",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com padrões silábicos CV (consoante/vogal), V (vogal), CVC, CCV, identificando que existem padrões silábicos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "padrões silábicos na leitura e escrita"
+    },
+    {
+      "codigo": "EF01LP21",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Escrever, espontaneamente ou por ditado, palavras e frases de forma alfabética — usando letras/grafemas que representem fonemas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita alfabética de palavras e frases"
+    },
+    {
+      "codigo": "EF01LP22",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar e diferenciar letras e outros sinais gráficos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "distinção entre letras e outros sinais gráficos"
+    },
+    {
+      "codigo": "EF02LP01",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler palavras com correspondências regulares diretas entre letras e fonemas (f, v, t, d, p, b) e correspondências regulares contextuais (c e g).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "decodificação de palavras com correspondências regulares"
+    },
+    {
+      "codigo": "EF02LP02",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler, com autonomia, palavras com estruturas silábicas canônicas (consoante/vogal), não canônicas e mistas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura autônoma com diferentes padrões silábicos"
+    },
+    {
+      "codigo": "EF02LP03",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler, com fluência e compreensão, textos curtos com nível de textualidade adequado.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "fluência e compreensão em textos curtos"
+    },
+    {
+      "codigo": "EF02LP04",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, tirinhas, cartuns, memes e piadas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos de humor"
+    },
+    {
+      "codigo": "EF02LP05",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, quadrinhos e tirinhas, relacionando imagens e palavras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de quadrinhos relacionando imagem e texto"
+    },
+    {
+      "codigo": "EF02LP06",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, textos instrucionais de receitas, de regras de jogo e de aplicativos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos instrucionais"
+    },
+    {
+      "codigo": "EF02LP07",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, (re)contagens de histórias, poemas e outros textos em verso (quadrinhas, parlendas, canções), receitas, instruções de montagem, dentre outros gêneros do campo da vida cotidiana, considerando a situação comunicativa e o tema/assunto/finalidade do texto.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos de gêneros variados"
+    },
+    {
+      "codigo": "EF02LP08",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, notícias, álbuns noticiosos, jornais radiofônicos e televisivos sobre fatos da escola e da comunidade.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos jornalísticos"
+    },
+    {
+      "codigo": "EF02LP09",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, textos narrativos de aventura e de ficção científica, álbuns de personagens, cartazes de filmes, entre outros, considerando a situação comunicativa e o tema/assunto do texto.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de narrativas ficcionais"
+    },
+    {
+      "codigo": "EF02LP10",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, (re)contagens de histórias, poemas e outros textos em verso (quadrinhas, parlendas, canções), para compor um livro da turma, digital ou impresso.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos para publicação"
+    },
+    {
+      "codigo": "EF02LP11",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Identificar, em palavras, a separação entre sílabas e reconhecer a sílaba tônica.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "separação silábica e identificação da sílaba tônica"
+    },
+    {
+      "codigo": "EF02LP12",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Identificar e grafar, corretamente, palavras com marcas de nasalidade (til, m e n).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "marcas de nasalidade na escrita"
+    },
+    {
+      "codigo": "EF02LP13",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Escrever palavras, frases e textos curtos com autonomia, utilizando a escrita alfabética, demonstrando preocupação com a ortografia.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita autônoma com preocupação ortográfica"
+    },
+    {
+      "codigo": "EF02LP14",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com correspondências regulares contextuais entre grafemas e fonemas — como c/qu; g/gu; r/rr; s/ss; o uso de m e n como marcas de nasalidade, o uso do dígrafo nh e o uso de s após ditongo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "correspondências regulares contextuais grafema-fonema"
+    },
+    {
+      "codigo": "EF02LP15",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com dígrafos e encontros consonantais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "dígrafos e encontros consonantais"
+    },
+    {
+      "codigo": "EF02LP16",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Segmentar corretamente as palavras ao escrever frases e textos.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação correta de palavras na escrita"
+    },
+    {
+      "codigo": "EF02LP17",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar e usar adequadamente na escrita ponto final, ponto de interrogação, ponto de exclamação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de pontuação na escrita"
+    },
+    {
+      "codigo": "EF02LP18",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar e usar, adequadamente, letras maiúsculas em início de frases e em substantivos próprios (nomes de pessoas, cidades, países etc.).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de maiúsculas em início de frase e nomes próprios"
+    },
+    {
+      "codigo": "EF02LP19",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar a função dos gêneros textuais e seus portadores — em que suporte circulam, para que foram produzidos, quem os produz.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "função social e suporte dos gêneros textuais"
+    },
+    {
+      "codigo": "EF02LP20",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Reconhecer, em textos, os sinais de pontuação de final de frase — ponto final, exclamação e interrogação —, reconhecendo os efeitos de sentido que causam.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "sinais de pontuação e efeitos de sentido"
+    },
+    {
+      "codigo": "EF03LP01",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler e compreender palavras com correspondências irregulares entre grafemas e fonemas (como em 'hoje', 'fixo', 'chave') e palavras com correspondências regulares contextuais (como em 'caça/casa', 'garfo/gelo').",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura de palavras com correspondências irregulares"
+    },
+    {
+      "codigo": "EF03LP02",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler e compreender, com autonomia e fluência, textos de diferentes gêneros e temáticas, com nível de textualidade adequado ao ano.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura fluente e compreensão de textos variados"
+    },
+    {
+      "codigo": "EF03LP03",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar e inferir, em texto ou sequência de imagens, fatos, situações e ações.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação e inferência de fatos em textos"
+    },
+    {
+      "codigo": "EF03LP04",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros (poemas, fábulas, contos populares, entre outros), expressando suas preferências por temas e gêneros e fazendo apreciações estéticas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos literários variados"
+    },
+    {
+      "codigo": "EF03LP05",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, textos de divulgação científica sobre temas de interesse da turma, identificando a ideia principal e relacionando texto e imagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF03LP06",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, com a ajuda do professor e em colaboração com os colegas, textos sobre temas de interesse, com base em pesquisa, considerando a situação comunicativa.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos informativos com base em pesquisa"
+    },
+    {
+      "codigo": "EF03LP07",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, com a ajuda do professor, cartazes, avisos, convites, receitas, instruções de montagem, entre outros gêneros do campo da vida cotidiana, que possam ser lidos por outras pessoas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de gêneros textuais do cotidiano"
+    },
+    {
+      "codigo": "EF03LP08",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, (re)contagens de histórias, poemas, quadrinhos, tirinhas, entre outros, considerando a situação comunicativa.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção com autonomia de textos narrativos e poéticos"
+    },
+    {
+      "codigo": "EF03LP09",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Participar de situações de leitura de textos de divulgação científica, identificando o tema e a ideia principal.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de tema e ideia principal em textos científicos"
+    },
+    {
+      "codigo": "EF03LP10",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar, em notícias, o fato central, as principais circunstâncias a ele relacionadas e eventuais opiniões presentes no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de fato central e circunstâncias em notícias"
+    },
+    {
+      "codigo": "EF03LP11",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e reproduzir, em listas, agendas, quadros, tabelas simples, calendários, avisos, convites, receitas e instruções de montagem, a formatação e diagramação específica de cada gênero do campo da vida cotidiana.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "formatação e diagramação de gêneros cotidianos"
+    },
+    {
+      "codigo": "EF03LP12",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, obedecendo às convenções da escrita, de acordo com as regularidades estudadas no ano.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia e convenções de escrita"
+    },
+    {
+      "codigo": "EF03LP13",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar e usar, na escrita, dígrafos, dífonos e encontros consonantais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "dígrafos e encontros consonantais na escrita"
+    },
+    {
+      "codigo": "EF03LP14",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a estrutura de adjetivos e de frases adjetivas e seu papel na caracterização de pessoas, lugares, coisas e animais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "adjetivos e sua função de caracterização"
+    },
+    {
+      "codigo": "EF03LP15",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a concordância entre o artigo e o substantivo, e entre adjetivo e substantivo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "concordância nominal em textos"
+    },
+    {
+      "codigo": "EF03LP16",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a conjugação dos verbos no presente, no passado e no futuro do indicativo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conjugação verbal: presente, passado e futuro"
+    },
+    {
+      "codigo": "EF03LP17",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, o uso de pronomes pessoais como recurso de referenciação e substituição de nomes.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pronomes pessoais como recurso de referenciação"
+    },
+    {
+      "codigo": "EF03LP18",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de conectivos (conjunções coordenativas: e, mas, ou, pois, logo, portanto) e reconhecer sua função de articular partes do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conectivos e articulação de partes do texto"
+    },
+    {
+      "codigo": "EF04LP01",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros e extensões, expressando suas preferências por obras, autores e gêneros e estabelecendo comparações entre eles.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma e comparação de textos literários"
+    },
+    {
+      "codigo": "EF04LP02",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, textos de divulgação científica e de interesse do grupo, identificando elementos que validem a interpretação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF04LP03",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar, em notícias, o fato central, as principais circunstâncias a ele relacionadas e eventuais opiniões presentes no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de fato central e opiniões em notícias"
+    },
+    {
+      "codigo": "EF04LP04",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Inferir informações implícitas em textos narrativos e argumentativos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "inferência em textos narrativos e argumentativos"
+    },
+    {
+      "codigo": "EF04LP05",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Comparar informações apresentadas em diferentes fontes sobre o mesmo tema, identificando coincidências e divergências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "comparação de informações em diferentes fontes"
+    },
+    {
+      "codigo": "EF04LP06",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, textos narrativos, considerando a situação comunicativa, o tema e a estrutura composicional do gênero.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos narrativos"
+    },
+    {
+      "codigo": "EF04LP07",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, notícias baseadas em fatos da escola e da comunidade para compor jornal escolar impresso ou digital.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de notícias para jornal escolar"
+    },
+    {
+      "codigo": "EF04LP08",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Produzir textos de diferentes gêneros sobre temas de interesse, com base em pesquisa em fontes previamente selecionadas pelo professor.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos informativos com base em pesquisa"
+    },
+    {
+      "codigo": "EF04LP09",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Expressar oralmente, com clareza e coerência, preferências por obras literárias, temas, gêneros e autores.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "expressão oral de preferências literárias"
+    },
+    {
+      "codigo": "EF04LP10",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e reproduzir, em seminários e apresentações, a formatação e diagramação específica de cada gênero em estudo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "estrutura e apresentação oral de gêneros formais"
+    },
+    {
+      "codigo": "EF04LP11",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Assistir a apresentações e seminários e formular perguntas pertinentes ao tema.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escuta e participação em seminários"
+    },
+    {
+      "codigo": "EF04LP12",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, obedecendo às convenções da língua escrita.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia e convenções da língua escrita"
+    },
+    {
+      "codigo": "EF04LP13",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Usar adequadamente na escrita sinais de pontuação: ponto final, ponto de interrogação, ponto de exclamação, dois pontos e travessão no discurso direto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pontuação incluindo discurso direto"
+    },
+    {
+      "codigo": "EF04LP14",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a função de advérbios e de locuções adverbiais na indicação de circunstâncias de tempo, lugar e modo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "função de advérbios e locuções adverbiais"
+    },
+    {
+      "codigo": "EF04LP15",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, os tempos verbais — presente, pretérito imperfeito, pretérito perfeito e futuro do presente — e suas relações com os modos de expressar o tempo no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "tempos verbais e expressão do tempo no texto"
+    },
+    {
+      "codigo": "EF04LP16",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a relação entre pronomes pessoais e os nomes a que se referem (antecedente e subsequente), reconhecendo a função dos pronomes na coesão textual.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pronomes e coesão textual por referência"
+    },
+    {
+      "codigo": "EF04LP17",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, o uso de sinais de pontuação como recurso estilístico para indicar pausas, entonação e intenção comunicativa.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pontuação como recurso estilístico e comunicativo"
+    },
+    {
+      "codigo": "EF04LP18",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em texto ou sequência textual, os períodos e, dentro dos períodos, as orações, reconhecendo seu papel na organização e sentido do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "períodos, orações e organização do texto"
+    },
+    {
+      "codigo": "EF04LP19",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de conectivos (preposições, conjunções e advérbios) para articular partes do texto, reconhecendo relações de adição, oposição, causalidade, finalidade e temporalidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conectivos e relações de sentido no texto"
+    },
+    {
+      "codigo": "EF05LP01",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros e extensões, desenvolvendo preferências por gêneros, temas, autores.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos literários variados"
+    },
+    {
+      "codigo": "EF05LP02",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos argumentativos (cartas de leitor, carta de reclamação, textos de opinião) sobre temas de interesse da turma, identificando a tese e os principais argumentos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e identificação de tese e argumentos"
+    },
+    {
+      "codigo": "EF05LP03",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos de divulgação científica e de interesse do grupo sobre temas relevantes da contemporaneidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF05LP04",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Inferir informações implícitas em textos e justificar com elementos do próprio texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "inferência com justificativa em elementos do texto"
+    },
+    {
+      "codigo": "EF05LP05",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar e avaliar os efeitos de sentido decorrentes do uso de figuras de linguagem (metáforas, comparações, personificações) em textos literários e não literários.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "efeitos de sentido de figuras de linguagem"
+    },
+    {
+      "codigo": "EF05LP06",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Comparar textos de diferentes gêneros, identificando características comuns e específicas em relação ao tema, à forma composicional e ao estilo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "comparação entre textos de diferentes gêneros"
+    },
+    {
+      "codigo": "EF05LP07",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos narrativos com marcadores temporais e espaciais, discurso direto e indireto e recursos de descrição de personagens e ambientes.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos narrativos com recursos estilísticos"
+    },
+    {
+      "codigo": "EF05LP08",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos argumentativos sobre temas polêmicos relacionados a situações da escola ou da comunidade.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos argumentativos"
+    },
+    {
+      "codigo": "EF05LP09",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos de divulgação científica sobre temas de interesse, considerando o nível de conhecimento do público-alvo.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF05LP10",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, notícias sobre fatos da escola e da comunidade para compor jornal escolar impresso ou digital.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de notícias para jornal escolar"
+    },
+    {
+      "codigo": "EF05LP11",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Planejar e produzir, oralmente, com autonomia, textos argumentativos, considerando a situação comunicativa.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção oral autônoma de textos argumentativos"
+    },
+    {
+      "codigo": "EF05LP12",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e usar recursos de coesão e coerência em apresentações orais, seminários e debates.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "coesão e coerência em apresentações orais"
+    },
+    {
+      "codigo": "EF05LP13",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Assistir a apresentações, debates e seminários, formulando perguntas pertinentes e apresentando posicionamento próprio.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "participação em debates e seminários com posicionamento"
+    },
+    {
+      "codigo": "EF05LP14",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, de acordo com as regularidades e irregularidades estudadas, e usar o dicionário para confirmar a grafia.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia com uso autônomo do dicionário"
+    },
+    {
+      "codigo": "EF05LP15",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Usar adequadamente na escrita sinais de pontuação: ponto final, ponto de interrogação, ponto de exclamação, dois pontos, travessão, vírgula em enumeração e reticências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso ampliado de sinais de pontuação na escrita"
+    },
+    {
+      "codigo": "EF05LP16",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a concordância verbal e nominal e fazer uso adequado em produções escritas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "concordância verbal e nominal na leitura e escrita"
+    },
+    {
+      "codigo": "EF05LP17",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a relação entre os tempos verbais e os modos de expressar tempo, causa, consequência, oposição e conclusão.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relações de sentido expressas por tempos verbais"
+    },
+    {
+      "codigo": "EF05LP18",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, palavras e expressões que indicam opinião, e usá-las em produções próprias.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "marcadores de opinião em textos"
+    },
+    {
+      "codigo": "EF05LP19",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de recursos linguísticos para marcar relações de causa e consequência, oposição, conclusão e temporalidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "recursos linguísticos de articulação e coesão"
+    },
+    {
+      "codigo": "EF05LP20",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a paragrafação e seu papel na organização do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "paragrafação e organização textual"
+    }
+  ]
+}

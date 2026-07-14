@@ -1,0 +1,219 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa — habilidades EF04LP (4º ano)",
+  "total": 19,
+  "habilidades": [
+    {
+      "codigo": "EF04LP01",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros e extensões, expressando suas preferências por obras, autores e gêneros e estabelecendo comparações entre eles.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma e comparação de textos literários"
+    },
+    {
+      "codigo": "EF04LP02",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, textos de divulgação científica e de interesse do grupo, identificando elementos que validem a interpretação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF04LP03",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar, em notícias, o fato central, as principais circunstâncias a ele relacionadas e eventuais opiniões presentes no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de fato central e opiniões em notícias"
+    },
+    {
+      "codigo": "EF04LP04",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Inferir informações implícitas em textos narrativos e argumentativos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "inferência em textos narrativos e argumentativos"
+    },
+    {
+      "codigo": "EF04LP05",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Comparar informações apresentadas em diferentes fontes sobre o mesmo tema, identificando coincidências e divergências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "comparação de informações em diferentes fontes"
+    },
+    {
+      "codigo": "EF04LP06",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, textos narrativos, considerando a situação comunicativa, o tema e a estrutura composicional do gênero.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos narrativos"
+    },
+    {
+      "codigo": "EF04LP07",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, notícias baseadas em fatos da escola e da comunidade para compor jornal escolar impresso ou digital.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de notícias para jornal escolar"
+    },
+    {
+      "codigo": "EF04LP08",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Produzir textos de diferentes gêneros sobre temas de interesse, com base em pesquisa em fontes previamente selecionadas pelo professor.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos informativos com base em pesquisa"
+    },
+    {
+      "codigo": "EF04LP09",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Expressar oralmente, com clareza e coerência, preferências por obras literárias, temas, gêneros e autores.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "expressão oral de preferências literárias"
+    },
+    {
+      "codigo": "EF04LP10",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e reproduzir, em seminários e apresentações, a formatação e diagramação específica de cada gênero em estudo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "estrutura e apresentação oral de gêneros formais"
+    },
+    {
+      "codigo": "EF04LP11",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Assistir a apresentações e seminários e formular perguntas pertinentes ao tema.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escuta e participação em seminários"
+    },
+    {
+      "codigo": "EF04LP12",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, obedecendo às convenções da língua escrita.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia e convenções da língua escrita"
+    },
+    {
+      "codigo": "EF04LP13",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Usar adequadamente na escrita sinais de pontuação: ponto final, ponto de interrogação, ponto de exclamação, dois pontos e travessão no discurso direto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pontuação incluindo discurso direto"
+    },
+    {
+      "codigo": "EF04LP14",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a função de advérbios e de locuções adverbiais na indicação de circunstâncias de tempo, lugar e modo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "função de advérbios e locuções adverbiais"
+    },
+    {
+      "codigo": "EF04LP15",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, os tempos verbais — presente, pretérito imperfeito, pretérito perfeito e futuro do presente — e suas relações com os modos de expressar o tempo no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "tempos verbais e expressão do tempo no texto"
+    },
+    {
+      "codigo": "EF04LP16",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a relação entre pronomes pessoais e os nomes a que se referem (antecedente e subsequente), reconhecendo a função dos pronomes na coesão textual.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pronomes e coesão textual por referência"
+    },
+    {
+      "codigo": "EF04LP17",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, o uso de sinais de pontuação como recurso estilístico para indicar pausas, entonação e intenção comunicativa.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pontuação como recurso estilístico e comunicativo"
+    },
+    {
+      "codigo": "EF04LP18",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em texto ou sequência textual, os períodos e, dentro dos períodos, as orações, reconhecendo seu papel na organização e sentido do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "períodos, orações e organização do texto"
+    },
+    {
+      "codigo": "EF04LP19",
+      "ano": 4,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de conectivos (preposições, conjunções e advérbios) para articular partes do texto, reconhecendo relações de adição, oposição, causalidade, finalidade e temporalidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conectivos e relações de sentido no texto"
+    }
+  ]
+}

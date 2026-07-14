@@ -1,0 +1,230 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa — habilidades EF05LP (5º ano)",
+  "total": 20,
+  "habilidades": [
+    {
+      "codigo": "EF05LP01",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros e extensões, desenvolvendo preferências por gêneros, temas, autores.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos literários variados"
+    },
+    {
+      "codigo": "EF05LP02",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos argumentativos (cartas de leitor, carta de reclamação, textos de opinião) sobre temas de interesse da turma, identificando a tese e os principais argumentos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e identificação de tese e argumentos"
+    },
+    {
+      "codigo": "EF05LP03",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos de divulgação científica e de interesse do grupo sobre temas relevantes da contemporaneidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF05LP04",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Inferir informações implícitas em textos e justificar com elementos do próprio texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "inferência com justificativa em elementos do texto"
+    },
+    {
+      "codigo": "EF05LP05",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar e avaliar os efeitos de sentido decorrentes do uso de figuras de linguagem (metáforas, comparações, personificações) em textos literários e não literários.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "efeitos de sentido de figuras de linguagem"
+    },
+    {
+      "codigo": "EF05LP06",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Comparar textos de diferentes gêneros, identificando características comuns e específicas em relação ao tema, à forma composicional e ao estilo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "comparação entre textos de diferentes gêneros"
+    },
+    {
+      "codigo": "EF05LP07",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos narrativos com marcadores temporais e espaciais, discurso direto e indireto e recursos de descrição de personagens e ambientes.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos narrativos com recursos estilísticos"
+    },
+    {
+      "codigo": "EF05LP08",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos argumentativos sobre temas polêmicos relacionados a situações da escola ou da comunidade.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção autônoma de textos argumentativos"
+    },
+    {
+      "codigo": "EF05LP09",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com autonomia, textos de divulgação científica sobre temas de interesse, considerando o nível de conhecimento do público-alvo.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF05LP10",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, notícias sobre fatos da escola e da comunidade para compor jornal escolar impresso ou digital.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de notícias para jornal escolar"
+    },
+    {
+      "codigo": "EF05LP11",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Planejar e produzir, oralmente, com autonomia, textos argumentativos, considerando a situação comunicativa.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção oral autônoma de textos argumentativos"
+    },
+    {
+      "codigo": "EF05LP12",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e usar recursos de coesão e coerência em apresentações orais, seminários e debates.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "coesão e coerência em apresentações orais"
+    },
+    {
+      "codigo": "EF05LP13",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Assistir a apresentações, debates e seminários, formulando perguntas pertinentes e apresentando posicionamento próprio.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "participação em debates e seminários com posicionamento"
+    },
+    {
+      "codigo": "EF05LP14",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, de acordo com as regularidades e irregularidades estudadas, e usar o dicionário para confirmar a grafia.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia com uso autônomo do dicionário"
+    },
+    {
+      "codigo": "EF05LP15",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Usar adequadamente na escrita sinais de pontuação: ponto final, ponto de interrogação, ponto de exclamação, dois pontos, travessão, vírgula em enumeração e reticências.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso ampliado de sinais de pontuação na escrita"
+    },
+    {
+      "codigo": "EF05LP16",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a concordância verbal e nominal e fazer uso adequado em produções escritas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "concordância verbal e nominal na leitura e escrita"
+    },
+    {
+      "codigo": "EF05LP17",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a relação entre os tempos verbais e os modos de expressar tempo, causa, consequência, oposição e conclusão.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relações de sentido expressas por tempos verbais"
+    },
+    {
+      "codigo": "EF05LP18",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, palavras e expressões que indicam opinião, e usá-las em produções próprias.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "marcadores de opinião em textos"
+    },
+    {
+      "codigo": "EF05LP19",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de recursos linguísticos para marcar relações de causa e consequência, oposição, conclusão e temporalidade.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "recursos linguísticos de articulação e coesão"
+    },
+    {
+      "codigo": "EF05LP20",
+      "ano": 5,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a paragrafação e seu papel na organização do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "paragrafação e organização textual"
+    }
+  ]
+}

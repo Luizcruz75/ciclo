@@ -1,0 +1,230 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa — habilidades EF02LP (2º ano)",
+  "total": 20,
+  "habilidades": [
+    {
+      "codigo": "EF02LP01",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler palavras com correspondências regulares diretas entre letras e fonemas (f, v, t, d, p, b) e correspondências regulares contextuais (c e g).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "decodificação de palavras com correspondências regulares"
+    },
+    {
+      "codigo": "EF02LP02",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler, com autonomia, palavras com estruturas silábicas canônicas (consoante/vogal), não canônicas e mistas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura autônoma com diferentes padrões silábicos"
+    },
+    {
+      "codigo": "EF02LP03",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler, com fluência e compreensão, textos curtos com nível de textualidade adequado.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "fluência e compreensão em textos curtos"
+    },
+    {
+      "codigo": "EF02LP04",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, tirinhas, cartuns, memes e piadas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos de humor"
+    },
+    {
+      "codigo": "EF02LP05",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, quadrinhos e tirinhas, relacionando imagens e palavras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de quadrinhos relacionando imagem e texto"
+    },
+    {
+      "codigo": "EF02LP06",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, em colaboração com os colegas e com a ajuda do professor, textos instrucionais de receitas, de regras de jogo e de aplicativos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura e compreensão de textos instrucionais"
+    },
+    {
+      "codigo": "EF02LP07",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, (re)contagens de histórias, poemas e outros textos em verso (quadrinhas, parlendas, canções), receitas, instruções de montagem, dentre outros gêneros do campo da vida cotidiana, considerando a situação comunicativa e o tema/assunto/finalidade do texto.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos de gêneros variados"
+    },
+    {
+      "codigo": "EF02LP08",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, notícias, álbuns noticiosos, jornais radiofônicos e televisivos sobre fatos da escola e da comunidade.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos jornalísticos"
+    },
+    {
+      "codigo": "EF02LP09",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, textos narrativos de aventura e de ficção científica, álbuns de personagens, cartazes de filmes, entre outros, considerando a situação comunicativa e o tema/assunto do texto.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de narrativas ficcionais"
+    },
+    {
+      "codigo": "EF02LP10",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Planejar e produzir, em colaboração com os colegas e com a ajuda do professor, (re)contagens de histórias, poemas e outros textos em verso (quadrinhas, parlendas, canções), para compor um livro da turma, digital ou impresso.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção colaborativa de textos para publicação"
+    },
+    {
+      "codigo": "EF02LP11",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Identificar, em palavras, a separação entre sílabas e reconhecer a sílaba tônica.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "separação silábica e identificação da sílaba tônica"
+    },
+    {
+      "codigo": "EF02LP12",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Identificar e grafar, corretamente, palavras com marcas de nasalidade (til, m e n).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "marcas de nasalidade na escrita"
+    },
+    {
+      "codigo": "EF02LP13",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Escrever palavras, frases e textos curtos com autonomia, utilizando a escrita alfabética, demonstrando preocupação com a ortografia.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita autônoma com preocupação ortográfica"
+    },
+    {
+      "codigo": "EF02LP14",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com correspondências regulares contextuais entre grafemas e fonemas — como c/qu; g/gu; r/rr; s/ss; o uso de m e n como marcas de nasalidade, o uso do dígrafo nh e o uso de s após ditongo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "correspondências regulares contextuais grafema-fonema"
+    },
+    {
+      "codigo": "EF02LP15",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com dígrafos e encontros consonantais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "dígrafos e encontros consonantais"
+    },
+    {
+      "codigo": "EF02LP16",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Segmentar corretamente as palavras ao escrever frases e textos.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação correta de palavras na escrita"
+    },
+    {
+      "codigo": "EF02LP17",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar e usar adequadamente na escrita ponto final, ponto de interrogação, ponto de exclamação.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de pontuação na escrita"
+    },
+    {
+      "codigo": "EF02LP18",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar e usar, adequadamente, letras maiúsculas em início de frases e em substantivos próprios (nomes de pessoas, cidades, países etc.).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "uso de maiúsculas em início de frase e nomes próprios"
+    },
+    {
+      "codigo": "EF02LP19",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar a função dos gêneros textuais e seus portadores — em que suporte circulam, para que foram produzidos, quem os produz.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "função social e suporte dos gêneros textuais"
+    },
+    {
+      "codigo": "EF02LP20",
+      "ano": 2,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Reconhecer, em textos, os sinais de pontuação de final de frase — ponto final, exclamação e interrogação —, reconhecendo os efeitos de sentido que causam.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "sinais de pontuação e efeitos de sentido"
+    }
+  ]
+}

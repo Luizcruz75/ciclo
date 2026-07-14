@@ -1,0 +1,208 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa — habilidades EF03LP (3º ano)",
+  "total": 18,
+  "habilidades": [
+    {
+      "codigo": "EF03LP01",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler e compreender palavras com correspondências irregulares entre grafemas e fonemas (como em 'hoje', 'fixo', 'chave') e palavras com correspondências regulares contextuais (como em 'caça/casa', 'garfo/gelo').",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "leitura de palavras com correspondências irregulares"
+    },
+    {
+      "codigo": "EF03LP02",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler e compreender, com autonomia e fluência, textos de diferentes gêneros e temáticas, com nível de textualidade adequado ao ano.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura fluente e compreensão de textos variados"
+    },
+    {
+      "codigo": "EF03LP03",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Identificar e inferir, em texto ou sequência de imagens, fatos, situações e ações.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação e inferência de fatos em textos"
+    },
+    {
+      "codigo": "EF03LP04",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com autonomia, textos literários de diferentes gêneros (poemas, fábulas, contos populares, entre outros), expressando suas preferências por temas e gêneros e fazendo apreciações estéticas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura autônoma de textos literários variados"
+    },
+    {
+      "codigo": "EF03LP05",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Estratégias de leitura",
+      "descricao": "Ler e compreender, com certa autonomia, textos de divulgação científica sobre temas de interesse da turma, identificando a ideia principal e relacionando texto e imagens.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "leitura de textos de divulgação científica"
+    },
+    {
+      "codigo": "EF03LP06",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, com a ajuda do professor e em colaboração com os colegas, textos sobre temas de interesse, com base em pesquisa, considerando a situação comunicativa.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de textos informativos com base em pesquisa"
+    },
+    {
+      "codigo": "EF03LP07",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita colaborativa",
+      "descricao": "Planejar e produzir, com a ajuda do professor, cartazes, avisos, convites, receitas, instruções de montagem, entre outros gêneros do campo da vida cotidiana, que possam ser lidos por outras pessoas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção de gêneros textuais do cotidiano"
+    },
+    {
+      "codigo": "EF03LP08",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Escrita autônoma",
+      "descricao": "Planejar e produzir, com certa autonomia, (re)contagens de histórias, poemas, quadrinhos, tirinhas, entre outros, considerando a situação comunicativa.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção com autonomia de textos narrativos e poéticos"
+    },
+    {
+      "codigo": "EF03LP09",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Participar de situações de leitura de textos de divulgação científica, identificando o tema e a ideia principal.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de tema e ideia principal em textos científicos"
+    },
+    {
+      "codigo": "EF03LP10",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar, em notícias, o fato central, as principais circunstâncias a ele relacionadas e eventuais opiniões presentes no texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "identificação de fato central e circunstâncias em notícias"
+    },
+    {
+      "codigo": "EF03LP11",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e reproduzir, em listas, agendas, quadros, tabelas simples, calendários, avisos, convites, receitas e instruções de montagem, a formatação e diagramação específica de cada gênero do campo da vida cotidiana.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": true,
+      "objeto_da_avaliacao": "formatação e diagramação de gêneros cotidianos"
+    },
+    {
+      "codigo": "EF03LP12",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Grafar palavras com correção ortográfica, obedecendo às convenções da escrita, de acordo com as regularidades estudadas no ano.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ortografia e convenções de escrita"
+    },
+    {
+      "codigo": "EF03LP13",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar e usar, na escrita, dígrafos, dífonos e encontros consonantais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "dígrafos e encontros consonantais na escrita"
+    },
+    {
+      "codigo": "EF03LP14",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos e em produções próprias, a estrutura de adjetivos e de frases adjetivas e seu papel na caracterização de pessoas, lugares, coisas e animais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "adjetivos e sua função de caracterização"
+    },
+    {
+      "codigo": "EF03LP15",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a concordância entre o artigo e o substantivo, e entre adjetivo e substantivo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "concordância nominal em textos"
+    },
+    {
+      "codigo": "EF03LP16",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, a conjugação dos verbos no presente, no passado e no futuro do indicativo.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conjugação verbal: presente, passado e futuro"
+    },
+    {
+      "codigo": "EF03LP17",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Morfossintaxe",
+      "descricao": "Identificar, em textos lidos, o uso de pronomes pessoais como recurso de referenciação e substituição de nomes.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "pronomes pessoais como recurso de referenciação"
+    },
+    {
+      "codigo": "EF03LP18",
+      "ano": 3,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Coesão e coerência",
+      "descricao": "Identificar, em textos lidos, o uso de conectivos (conjunções coordenativas: e, mas, ou, pois, logo, portanto) e reconhecer sua função de articular partes do texto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "conectivos e articulação de partes do texto"
+    }
+  ]
+}

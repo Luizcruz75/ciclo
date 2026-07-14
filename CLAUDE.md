@@ -117,22 +117,19 @@ O schema completo está no PRD. Dois campos valem mais que todos os outros:
 
 ---
 
-## ⛔ O que NÃO fazer agora (F0 em andamento)
+## ✅ F0 — Fundação (COMPLETA)
 
-O projeto está na **F0 — Fundação**. Ainda **não** é hora de:
+Os três bloqueadores da F0 foram resolvidos:
 
-- ❌ `create-next-app` / scaffold
-- ❌ Escrever prompts dos agentes
-- ❌ Criar tabelas no Supabase
+1. ✅ `fonte_id` das 22 barreiras — parecer técnico assinado pela pedagoga responsável em 13/07/2026, salvo em `docs/embasamento/documento_pedagoga_01`
+2. ✅ Dataset BNCC — `data/bncc-ef1.json` criado com 244 habilidades (71 MAT + 173 LP, 1º ao 5º ano)
+3. ✅ Nome da pedagoga no produto — definido: não aparece no MVP, apenas após lançamento para testes
 
-**Motivo:** o dataset BNCC (`data/bncc-ef1.json`) ainda não existe. Sem ele o CLASSIFIER não tem lista fechada, o G5 não tem como saber o que é produção de texto, e o ADAPTER não sabe o que é embalagem e o que é objeto de avaliação.
+Protocolo de adaptação v0.1 criado em `docs/embasamento/protocolo-adaptacao-v0.1.docx`.
 
-**Bloqueadores abertos da F0:**
-1. 🔴 `fonte_id` das 22 barreiras — parecer assinado da pedagoga
-2. 🔴 Dataset BNCC — ~350 habilidades (PT + MAT, 1º ao 5º)
-3. 🔴 Nome da pedagoga no produto (risco A3 do PRD)
+## 🚧 Fase atual: F1 — Scaffold do projeto Next.js
 
-**Se eu pedir para começar a F1 antes disso, me lembre deste bloco.**
+**Próximo passo:** executar `create-next-app` e configurar estrutura base.
 
 ---
 

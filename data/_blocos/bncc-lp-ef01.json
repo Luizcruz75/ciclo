@@ -1,0 +1,252 @@
+{
+  "versao": "0.1",
+  "data": "2026-07-13",
+  "fonte": "BNCC — Base Nacional Comum Curricular, MEC, 2018. Versão final homologada.",
+  "fonte_url": "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+  "escopo": "EF Anos Iniciais — Língua Portuguesa — habilidades EF01LP (1º ano)",
+  "total": 22,
+  "habilidades": [
+    {
+      "codigo": "EF01LP01",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que textos são lidos e escritos da esquerda para a direita e de cima para baixo da página.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "orientação espacial da escrita"
+    },
+    {
+      "codigo": "EF01LP02",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer a separação das palavras, na escrita, por espaços em branco.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação de palavras na escrita"
+    },
+    {
+      "codigo": "EF01LP03",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que palavras diferentes compartilham algumas letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento de letras compartilhadas entre palavras"
+    },
+    {
+      "codigo": "EF01LP04",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que a mesma letra pode ser grafada de diferentes formas (imprensa/cursiva, maiúscula/minúscula).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "variantes gráficas das letras"
+    },
+    {
+      "codigo": "EF01LP05",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer o sistema de escrita alfabética como representação dos sons da fala.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "princípio alfabético de escrita"
+    },
+    {
+      "codigo": "EF01LP06",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Correspondência grafofônica",
+      "descricao": "Reconhecer que o número de sílabas de uma palavra é diferente do número de letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação entre sílabas e letras"
+    },
+    {
+      "codigo": "EF01LP07",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Identificar fonemas e relacioná-los às letras.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "relação fonema-grafema"
+    },
+    {
+      "codigo": "EF01LP08",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Relacionar elementos sonoros (sílabas, fonemas, partes de palavras) com sua representação escrita.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "correspondência entre elementos sonoros e escrita"
+    },
+    {
+      "codigo": "EF01LP09",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Ler palavras novas com precisão na decodificação, no caso de palavras de padrão silábico canônico (consoante/vogal).",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "decodificação de palavras com padrão silábico CV"
+    },
+    {
+      "codigo": "EF01LP10",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Leitura/Escuta",
+      "objeto_conhecimento": "Decodificação/Fluência de leitura",
+      "descricao": "Reconhecer o sistema de numeração alfabética e a ordem do alfabeto.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "ordem alfabética e conhecimento do alfabeto"
+    },
+    {
+      "codigo": "EF01LP11",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Construção do sistema alfabético",
+      "descricao": "Escrever, em colaboração com os colegas e com a ajuda do professor, listas de palavras, legendas para álbuns de fotos ou ilustrações, relatos de experiências, pequenos relatos de pesquisa, entre outros, que possam ser lidos por outras pessoas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "produção coletiva de listas e relatos simples"
+    },
+    {
+      "codigo": "EF01LP12",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Produção de textos",
+      "objeto_conhecimento": "Construção do sistema alfabético",
+      "descricao": "Escrever palavras, frases e textos curtos no nível de representação em que se encontra.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita de palavras e frases no nível de representação"
+    },
+    {
+      "codigo": "EF01LP13",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Identificar e nomear as letras do alfabeto em ordem alfabética e reconhecer o uso social do alfabeto por meio de listas, dicionários e outros.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "reconhecimento e nomeação do alfabeto"
+    },
+    {
+      "codigo": "EF01LP14",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Produção de textos orais",
+      "descricao": "Distinguir, ao ouvir, sílabas e fonemas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "consciência fonológica: sílabas e fonemas"
+    },
+    {
+      "codigo": "EF01LP15",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Manipular sons das palavras orais, explorando rimas, aliterações, separação de sílabas, inversão de sílabas e palavras, substituição de sílabas e sons etc.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "manipulação de sons e consciência fonológica"
+    },
+    {
+      "codigo": "EF01LP16",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Segmentar oralmente palavras em sílabas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "segmentação silábica oral"
+    },
+    {
+      "codigo": "EF01LP17",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Oralidade",
+      "objeto_conhecimento": "Consciência fonológica e fonêmica",
+      "descricao": "Comparar palavras identificando semelhanças e diferenças entre sons de sílabas iniciais, mediais e finais.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "comparação de sons em sílabas de palavras"
+    },
+    {
+      "codigo": "EF01LP18",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Reconhecer a vogal como núcleo da sílaba.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "vogal como núcleo silábico"
+    },
+    {
+      "codigo": "EF01LP19",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar o número de sílabas de palavras, classificando-as em monossílabas, dissílabas, trissílabas e polissílabas.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "classificação de palavras por número de sílabas"
+    },
+    {
+      "codigo": "EF01LP20",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Ler e escrever palavras com padrões silábicos CV (consoante/vogal), V (vogal), CVC, CCV, identificando que existem padrões silábicos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "padrões silábicos na leitura e escrita"
+    },
+    {
+      "codigo": "EF01LP21",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Escrever, espontaneamente ou por ditado, palavras e frases de forma alfabética — usando letras/grafemas que representem fonemas.",
+      "eh_producao_texto": true,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "escrita alfabética de palavras e frases"
+    },
+    {
+      "codigo": "EF01LP22",
+      "ano": 1,
+      "componente": "LP",
+      "pratica_linguagem": "Análise linguística/semiótica",
+      "objeto_conhecimento": "Ortografização",
+      "descricao": "Identificar e diferenciar letras e outros sinais gráficos.",
+      "eh_producao_texto": false,
+      "eh_leitura_interpretacao": false,
+      "objeto_da_avaliacao": "distinção entre letras e outros sinais gráficos"
+    }
+  ]
+}
