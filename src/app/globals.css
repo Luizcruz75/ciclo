@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+/*
+ * Tokens do design system do Ciclo — ver DESIGN.md §7.
+ * O DESIGN.md ainda não define um modo escuro explícito (é um produto
+ * "minimalista / moderno / light" por decisão, §título do documento), então
+ * não assumimos dark mode aqui até isso ser decidido deliberadamente.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* cor */
+  --color-tinta: #1c1d21;
+  --color-papel: #fafaf9;
+  --color-superficie: #ffffff;
+  --color-indigo: #3a3ed1;
+  --color-indigo-escuro: #2c2fa8;
+  --color-salvia: #4c8b6e;
+  --color-terracota: #c4633b;
+  --color-erro: #b3261e;
+  --color-tarja: #ffc94a;
+  --color-linha: #e4e4e7;
+  --color-texto-secundario: #6b6d76;
+
+  /* forma */
+  --radius-card: 10px;
+  --radius-botao: 8px;
+  --shadow-card: 0 1px 2px rgba(28, 29, 33, 0.04);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* cor — mapeadas para uso direto como classes Tailwind: bg-papel,
+     text-tinta, border-linha, etc. */
+  --color-tinta: var(--color-tinta);
+  --color-papel: var(--color-papel);
+  --color-superficie: var(--color-superficie);
+  --color-indigo: var(--color-indigo);
+  --color-indigo-escuro: var(--color-indigo-escuro);
+  --color-salvia: var(--color-salvia);
+  --color-terracota: var(--color-terracota);
+  --color-erro: var(--color-erro);
+  --color-tarja: var(--color-tarja);
+  --color-linha: var(--color-linha);
+  --color-texto-secundario: var(--color-texto-secundario);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* tipografia — as variáveis --font-display/--font-corpo/--font-mono
+     são preenchidas pelo next/font em layout.tsx (Fraunces/Inter/IBM Plex
+     Mono); aqui só as expomos como family utilitária do Tailwind. */
+  --font-display: var(--font-display), serif;
+  --font-corpo: var(--font-corpo), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+
+  /* forma */
+  --radius-card: var(--radius-card);
+  --radius-botao: var(--radius-botao);
+  --shadow-card: var(--shadow-card);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-corpo), sans-serif;
+  line-height: 1.5; /* DESIGN.md §2: mesma regra da barreira SEN-03, aplicada à interface */
 }
