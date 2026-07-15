@@ -5,6 +5,10 @@ export type Barreira = {
   grupo: string
   nome_curto: string
   pergunta_gatilho: string
+  tecnicas_indicadas: string[]
+  tecnicas_contraindicadas: string[]
+  classificacao: string
+  nota?: string
   ativa: boolean
 }
 
@@ -28,4 +32,9 @@ export function getGruposBarreiras(): GrupoBarreiras[] {
 
 export function getCodigosBarreirasValidos(): Set<string> {
   return new Set(barreirasAtivas.map((b) => b.codigo))
+}
+
+export function getBarreirasPorCodigos(codigos: string[]): Barreira[] {
+  const codigosBuscados = new Set(codigos)
+  return barreirasAtivas.filter((b) => codigosBuscados.has(b.codigo))
 }

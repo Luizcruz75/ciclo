@@ -1,0 +1,67 @@
+{
+  "versao": "0.1",
+  "fonte": "Curadoria própria, com base em pesquisa sobre interesses e temas infantis por faixa etária (6-10 anos). Ver docs/embasamento/ para referências.",
+  "categorias": [
+    {
+      "codigo": "FAN",
+      "nome": "Fantasia e Aventura"
+    },
+    {
+      "codigo": "NAT",
+      "nome": "Natureza e Animais"
+    },
+    {
+      "codigo": "ESP",
+      "nome": "Esportes e Movimento"
+    },
+    {
+      "codigo": "CRI",
+      "nome": "Criativo e Manual"
+    },
+    {
+      "codigo": "JOG",
+      "nome": "Jogos e Estratégia"
+    },
+    {
+      "codigo": "TEC",
+      "nome": "Tecnologia e Ciência"
+    },
+    {
+      "codigo": "OUT",
+      "nome": "Outros"
+    }
+  ],
+  "interesses": [
+    { "codigo": "FAN-01", "nome": "Dinossauros", "categoria": "FAN" },
+    { "codigo": "FAN-02", "nome": "Piratas", "categoria": "FAN" },
+    { "codigo": "FAN-03", "nome": "Cavaleiros e dragões", "categoria": "FAN" },
+    { "codigo": "FAN-04", "nome": "Super-heróis", "categoria": "FAN" },
+    { "codigo": "FAN-05", "nome": "Princesas e fadas", "categoria": "FAN" },
+    { "codigo": "FAN-06", "nome": "Espaço e astronautas", "categoria": "FAN" },
+
+    { "codigo": "NAT-01", "nome": "Animais selvagens", "categoria": "NAT" },
+    { "codigo": "NAT-02", "nome": "Animais de estimação", "categoria": "NAT" },
+    { "codigo": "NAT-03", "nome": "Insetos", "categoria": "NAT" },
+    { "codigo": "NAT-04", "nome": "Oceano e vida marinha", "categoria": "NAT" },
+
+    { "codigo": "ESP-01", "nome": "Futebol", "categoria": "ESP" },
+    { "codigo": "ESP-02", "nome": "Esportes em geral", "categoria": "ESP" },
+    { "codigo": "ESP-03", "nome": "Dança", "categoria": "ESP" },
+
+    { "codigo": "CRI-01", "nome": "Desenho e pintura", "categoria": "CRI" },
+    { "codigo": "CRI-02", "nome": "Massinha e artesanato", "categoria": "CRI" },
+    { "codigo": "CRI-03", "nome": "Origami", "categoria": "CRI" },
+    { "codigo": "CRI-04", "nome": "Culinária", "categoria": "CRI" },
+
+    { "codigo": "JOG-01", "nome": "Jogos de tabuleiro", "categoria": "JOG" },
+    { "codigo": "JOG-02", "nome": "Jogos de cartas", "categoria": "JOG" },
+    { "codigo": "JOG-03", "nome": "Xadrez", "categoria": "JOG" },
+    { "codigo": "JOG-04", "nome": "Video games", "categoria": "JOG" },
+
+    { "codigo": "TEC-01", "nome": "Robôs", "categoria": "TEC" },
+    { "codigo": "TEC-02", "nome": "Programação e tecnologia", "categoria": "TEC" },
+
+    { "codigo": "OUT-01", "nome": "Música", "categoria": "OUT" },
+    { "codigo": "OUT-02", "nome": "Carros e caminhões", "categoria": "OUT" }
+  ]
+}
