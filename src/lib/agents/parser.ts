@@ -71,7 +71,12 @@ export type ResultadoParser =
 
 const NOME_FERRAMENTA = 'registrar_questoes_parseadas'
 const MAX_TENTATIVAS = 3
-const MAX_TOKENS_RESPOSTA = 4096
+// 8192, não 4096: com o teto de produto de até 25 questões por prova (ver
+// SDD §4.3) e texto de apoio sendo repetido em cada questão que depende
+// dele, 4096 tokens de saída podia cortar a resposta no meio em provas
+// maiores com texto de apoio longo. 8192 dá folga real para o teto de 25
+// sem custo relevante (é limite de tokens de SAÍDA, não uso obrigatório).
+const MAX_TOKENS_RESPOSTA = 8192
 
 const FERRAMENTA_PARSER: Anthropic.Tool = {
   name: NOME_FERRAMENTA,

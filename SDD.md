@@ -218,6 +218,13 @@ Esta é a parte mais importante do banco de dados. Reflete a decisão central do
 | `eh_template` | verdadeiro/falso | Se pode ser reaproveitada em outro ano |
 | `criado_em` | data/hora | Quando foi criada |
 
+**Limite de questões por prova.** O PARSER (agente que quebra o texto colado em questões) tem um teto de tokens de resposta por chamada de IA — colar uma prova enorme demais pode fazer a resposta ser cortada no meio e quebrar o processamento. Por isso a tela `/provas/nova` aplica dois níveis:
+
+- **Acima de 15 questões:** aviso, não bloqueia. *"Identificamos X questões — processar pode levar um pouco mais de tempo."* Cobre provas de recuperação e simulados maiores, que existem de verdade.
+- **Acima de 25 questões:** bloqueia, com mensagem pedindo para revisar o texto colado. Nessa faixa, é muito mais provável que o professor tenha colado dois documentos juntos por engano do que uma prova real de Ensino Fundamental I — que costuma ter entre 5 e 15 questões.
+
+Os dois números (15 e 25) vivem como constantes em `src/lib/pipeline-prova.ts`, não no banco — são regra de produto, não dado de configuração por escola.
+
 **Tabela `questoes`**
 | Campo | Tipo | O que guarda |
 |---|---|---|
