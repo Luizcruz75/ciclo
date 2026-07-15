@@ -111,6 +111,7 @@ function montarSystemPrompt(params: {
   barreiras: Barreira[]
   tecnicasCandidatas: string[]
   interesses: Interesse[]
+  feedbackTentativaAnterior?: string
 }): string {
   const listaBarreiras = params.barreiras
     .map((b) => `- ${b.codigo} (${b.nome_curto}): ${b.pergunta_gatilho}`)
@@ -122,6 +123,10 @@ function montarSystemPrompt(params: {
     params.interesses.length > 0
       ? `\nInteresses cadastrados deste aluno: ${params.interesses.map((i) => i.nome).join(', ')}. Use-os APENAS se a técnica "${TECNICA_REESCRITA_NO_INTERESSE}" estiver na lista de técnicas permitidas abaixo — nunca como enfeite gratuito, e nunca introduza um interesse que não esteja nesta lista.`
       : ''
+
+  const blocoFeedback = params.feedbackTentativaAnterior
+    ? `\n⚠️ TENTATIVA ANTERIOR REPROVADA POR UM AUDITOR INDEPENDENTE:\n${params.feedbackTentativaAnterior}\n\nEsta é uma nova tentativa. Corrija especificamente os pontos acima — não repita a mesma abordagem que já foi reprovada.\n`
+    : ''
 
   return `Você é o ADAPTER do Ciclo, um adaptador de provas para o Ensino Fundamental I (1º ao 5º ano) de escola pública.
 
@@ -149,7 +154,7 @@ ${listaTecnicas}
 ${blocoInteresses}
 
 Se a questão tiver alternativas, adapte cada uma mantendo a mesma quantidade e a mesma resposta correta. Se não tiver alternativas, "alternativasAdaptadas" deve ser null.
-
+${blocoFeedback}
 Responda exclusivamente chamando a ferramenta ${NOME_FERRAMENTA}. Nunca responda em texto livre.`
 }
 
@@ -199,7 +204,8 @@ function numerosDivergem(original: Map<string, number>, adaptado: Map<string, nu
 export async function adaptarQuestao(
   questao: QuestaoParaAdaptar,
   barreirasCodigos: string[],
-  interessesCodigos: string[] = []
+  interessesCodigos: string[] = [],
+  feedbackTentativaAnterior?: string
 ): Promise<ResultadoAdapter> {
   const habilidade = getHabilidadePorCodigo(questao.bnccCodigo)
 
@@ -268,6 +274,7 @@ export async function adaptarQuestao(
     barreiras,
     tecnicasCandidatas,
     interesses,
+    feedbackTentativaAnterior,
   })
 
   const client = getAnthropicClient()
