@@ -1,5 +1,11 @@
 import 'server-only'
-import { adaptarQuestao, type QuestaoParaAdaptar, type AdaptacaoQuestao, type ResultadoAdapter } from '@/lib/agents/adapter'
+import {
+  adaptarQuestao,
+  type QuestaoParaAdaptar,
+  type AdaptacaoQuestao,
+  type ResultadoAdapter,
+  type FeedbackTentativaAnterior,
+} from '@/lib/agents/adapter'
 import { auditarAdaptacao, type Auditoria, type ResultadoVerifier } from '@/lib/agents/verifier'
 
 // ORQUESTRADOR — código próprio, sem framework (ver CLAUDE.md, seção
@@ -42,12 +48,24 @@ export type ResultadoOrquestracao =
     }
   | { sucesso: false; erro: string; tentativas: TentativaOrquestracao[] }
 
-function montarFeedbackReprovacao(auditoria: Auditoria, itensReprovados: (keyof Auditoria)[]): string {
+function montarTextoReprovacao(auditoria: Auditoria, itensReprovados: (keyof Auditoria)[]): string {
   const detalhes = itensReprovados
     .map((item) => `- ${item}${item === 'nivelDificuldadeMantido' ? ' (ITEM MAIS CRÍTICO)' : ''}: ${auditoria[item].motivo}`)
     .join('\n')
 
   return `A tentativa anterior foi REPROVADA pelo auditor nos seguintes pontos:\n${detalhes}`
+}
+
+function montarFeedbackParaAdapter(
+  adaptacaoReprovada: AdaptacaoQuestao,
+  auditoria: Auditoria,
+  itensReprovados: (keyof Auditoria)[]
+): FeedbackTentativaAnterior {
+  return {
+    adaptacaoReprovada,
+    itensReprovados,
+    motivos: itensReprovados.map((item) => auditoria[item].motivo),
+  }
 }
 
 export async function orquestrarAdaptacao(
@@ -56,7 +74,8 @@ export async function orquestrarAdaptacao(
   interessesCodigos: string[] = []
 ): Promise<ResultadoOrquestracao> {
   const tentativas: TentativaOrquestracao[] = []
-  let feedback: string | undefined
+  let feedback: FeedbackTentativaAnterior | undefined
+  let feedbackTexto: string | null = null
   let ultimaAdaptacao: AdaptacaoQuestao | null = null
   let motivoUltimaReprovacao = ''
 
@@ -69,7 +88,7 @@ export async function orquestrarAdaptacao(
       console.log(`[ORQUESTRADOR] tentativa ${numero} — ADAPTER falhou: ${resultadoAdapter.erro}`)
       tentativas.push({
         numero,
-        feedbackRecebido: feedback ?? null,
+        feedbackRecebido: feedbackTexto,
         resultadoAdapter,
         resultadoVerifier: null,
         aprovado: false,
@@ -93,7 +112,7 @@ export async function orquestrarAdaptacao(
       console.log(`[ORQUESTRADOR] tentativa ${numero} — VERIFIER APROVOU`)
       tentativas.push({
         numero,
-        feedbackRecebido: feedback ?? null,
+        feedbackRecebido: feedbackTexto,
         resultadoAdapter,
         resultadoVerifier,
         aprovado: true,
@@ -102,22 +121,33 @@ export async function orquestrarAdaptacao(
     }
 
     if (resultadoVerifier.sucesso) {
-      motivoUltimaReprovacao = montarFeedbackReprovacao(resultadoVerifier.auditoria, resultadoVerifier.itensReprovados)
+      motivoUltimaReprovacao = montarTextoReprovacao(resultadoVerifier.auditoria, resultadoVerifier.itensReprovados)
       console.log(`[ORQUESTRADOR] tentativa ${numero} — VERIFIER REPROVOU: ${resultadoVerifier.itensReprovados.join(', ')}`)
+      // Só dá para montar o feedback estruturado (com a adaptação reprovada
+      // e os itens do checklist) quando a auditoria de fato rodou. Uma falha
+      // técnica do VERIFIER não gera um checklist válido para basear a
+      // próxima tentativa.
+      feedback = montarFeedbackParaAdapter(
+        resultadoAdapter.adaptacao,
+        resultadoVerifier.auditoria,
+        resultadoVerifier.itensReprovados
+      )
+      feedbackTexto = motivoUltimaReprovacao
     } else {
       motivoUltimaReprovacao = `Não foi possível concluir a auditoria: ${resultadoVerifier.erro}`
       console.log(`[ORQUESTRADOR] tentativa ${numero} — VERIFIER falhou tecnicamente: ${resultadoVerifier.erro}`)
+      feedbackTexto = motivoUltimaReprovacao
+      // Mantém o "feedback" estruturado da rodada anterior (se houver) — não
+      // há checklist novo para substituí-lo.
     }
 
     tentativas.push({
       numero,
-      feedbackRecebido: feedback ?? null,
+      feedbackRecebido: feedbackTexto,
       resultadoAdapter,
       resultadoVerifier,
       aprovado: false,
     })
-
-    feedback = motivoUltimaReprovacao
   }
 
   console.log(`[ORQUESTRADOR] esgotadas ${MAX_TENTATIVAS_ORQUESTRADOR} tentativas sem aprovação — alerta vermelho`)

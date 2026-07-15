@@ -30,6 +30,16 @@ export type QuestaoParaAdaptar = {
   bnccCodigo: string
 }
 
+// Usado pelo orquestrador (src/lib/orchestrator.ts) quando o VERIFIER reprova
+// uma adaptação e pede uma nova tentativa. Carrega o motivo da reprovação
+// para que o ADAPTER tente uma abordagem genuinamente diferente da anterior,
+// em vez de repetir o mesmo erro. Nunca preenchido na primeira tentativa.
+export type FeedbackTentativaAnterior = {
+  adaptacaoReprovada: AdaptacaoQuestao
+  itensReprovados: string[]
+  motivos: string[]
+}
+
 export type AdaptacaoQuestao = {
   enunciadoAdaptado: string
   alternativasAdaptadas: string[] | null
@@ -105,13 +115,27 @@ function montarFerramenta(tecnicasCandidatas: string[], temAlternativas: boolean
   }
 }
 
+function montarBlocoFeedbackTentativaAnterior(feedback: FeedbackTentativaAnterior): string {
+  return `
+
+ATENÇÃO — esta é uma nova tentativa. A adaptação anterior foi reprovada pelo VERIFIER (auditor independente) nos seguintes pontos:
+${feedback.itensReprovados.map((item, i) => `- ${item}: ${feedback.motivos[i] ?? 'motivo não especificado'}`).join('\n')}
+
+Enunciado adaptado que foi REPROVADO (não repita esta abordagem):
+"${feedback.adaptacaoReprovada.enunciadoAdaptado}"
+
+Técnicas usadas na tentativa reprovada: ${feedback.adaptacaoReprovada.tecnicasAplicadas.join(', ')}
+
+Corrija especificamente os pontos reprovados acima. Se o problema foi de tamanho do enunciado, seja mais direto e sucinto. Se o problema foi de técnica, considere usar uma técnica diferente da lista permitida. Não repita o mesmo erro.`
+}
+
 function montarSystemPrompt(params: {
   habilidadeDescricao: string
   habilidadeCodigo: string
   barreiras: Barreira[]
   tecnicasCandidatas: string[]
   interesses: Interesse[]
-  feedbackTentativaAnterior?: string
+  feedbackTentativaAnterior?: FeedbackTentativaAnterior
 }): string {
   const listaBarreiras = params.barreiras
     .map((b) => `- ${b.codigo} (${b.nome_curto}): ${b.pergunta_gatilho}`)
@@ -123,10 +147,6 @@ function montarSystemPrompt(params: {
     params.interesses.length > 0
       ? `\nInteresses cadastrados deste aluno: ${params.interesses.map((i) => i.nome).join(', ')}. Use-os APENAS se a técnica "${TECNICA_REESCRITA_NO_INTERESSE}" estiver na lista de técnicas permitidas abaixo — nunca como enfeite gratuito, e nunca introduza um interesse que não esteja nesta lista.`
       : ''
-
-  const blocoFeedback = params.feedbackTentativaAnterior
-    ? `\n⚠️ TENTATIVA ANTERIOR REPROVADA POR UM AUDITOR INDEPENDENTE:\n${params.feedbackTentativaAnterior}\n\nEsta é uma nova tentativa. Corrija especificamente os pontos acima — não repita a mesma abordagem que já foi reprovada.\n`
-    : ''
 
   return `Você é o ADAPTER do Ciclo, um adaptador de provas para o Ensino Fundamental I (1º ao 5º ano) de escola pública.
 
@@ -154,8 +174,12 @@ ${listaTecnicas}
 ${blocoInteresses}
 
 Se a questão tiver alternativas, adapte cada uma mantendo a mesma quantidade e a mesma resposta correta. Se não tiver alternativas, "alternativasAdaptadas" deve ser null.
-${blocoFeedback}
-Responda exclusivamente chamando a ferramenta ${NOME_FERRAMENTA}. Nunca responda em texto livre.`
+
+Responda exclusivamente chamando a ferramenta ${NOME_FERRAMENTA}. Nunca responda em texto livre.${
+    params.feedbackTentativaAnterior
+      ? montarBlocoFeedbackTentativaAnterior(params.feedbackTentativaAnterior)
+      : ''
+  }`
 }
 
 function montarBlocoQuestao(questao: QuestaoParaAdaptar): string {
@@ -205,7 +229,7 @@ export async function adaptarQuestao(
   questao: QuestaoParaAdaptar,
   barreirasCodigos: string[],
   interessesCodigos: string[] = [],
-  feedbackTentativaAnterior?: string
+  feedbackTentativaAnterior?: FeedbackTentativaAnterior
 ): Promise<ResultadoAdapter> {
   const habilidade = getHabilidadePorCodigo(questao.bnccCodigo)
 
