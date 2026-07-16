@@ -69,7 +69,7 @@ export function ProvaAdaptadaDocument({
         <View style={styles.rodape} fixed>
           <Text style={styles.linhaData}>Gerado em {dataGeracao}</Text>
           <Text style={styles.linhaRodapeExtra}>https://www.linkedin.com/in/luizcruzdf/</Text>
-          <Text style={styles.linhaRodapeExtra}>InteligenciA Cruz (em breve)</Text>
+          <Text style={styles.linhaRodapeExtra}>inteligencIA Cruz (em breve)</Text>
         </View>
       </Page>
     </Document>
