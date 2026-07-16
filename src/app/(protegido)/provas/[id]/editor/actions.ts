@@ -194,10 +194,14 @@ export async function registrarEvidencia(input: {
 }
 
 // Gera o PDF da prova adaptada para 1 aluno, sob demanda (nunca pré-gerado
-// nem salvo). Inclui todas as questões daquela prova que já têm adaptação
-// aprovada pelo VERIFIER ou revisada manualmente pelo professor — nunca
-// entregamos ao aluno, silenciosamente, uma adaptação reprovada e não
-// revisada (mesma regra do orquestrador: CLAUDE.md).
+// nem salvo). SEMPRE inclui todas as questões da prova, na ordem original —
+// nunca omite nenhuma (achado de teste: uma prova com só as questões
+// adaptadas some silenciosamente com o resto, entregando ao aluno uma
+// prova incompleta sem aviso). Questão com adaptação aprovada pelo
+// VERIFIER ou revisada manualmente pelo professor entra com o texto
+// adaptado + marca "adaptada"; qualquer outra entra com o texto original,
+// sem marca — nunca entregamos, silenciosamente, uma adaptação reprovada
+// e não revisada (mesma regra do orquestrador: CLAUDE.md).
 export async function gerarPdfAdaptacoes(input: {
   provaId: string
   alunoId: string
@@ -245,7 +249,7 @@ export async function gerarPdfAdaptacoes(input: {
 
   const { data: questoes, error: erroQuestoes } = await supabase
     .from('questoes')
-    .select('id, ordem')
+    .select('id, ordem, enunciado')
     .eq('prova_id', input.provaId)
     .order('ordem')
 
@@ -254,7 +258,6 @@ export async function gerarPdfAdaptacoes(input: {
   }
 
   const questaoIds = questoes.map((q) => q.id as string)
-  const ordemPorQuestaoId = new Map(questoes.map((q) => [q.id as string, q.ordem as number]))
 
   const { data: adaptacoes, error: erroAdaptacoes } = await supabase
     .from('adaptacoes')
@@ -266,23 +269,25 @@ export async function gerarPdfAdaptacoes(input: {
     return { sucesso: false, erro: 'Não foi possível carregar as adaptações.' }
   }
 
-  const questoesParaPdf: QuestaoParaPdf[] = (adaptacoes ?? [])
-    .filter((a) => a.verifier_aprovado === true || a.editado_pelo_professor === true)
-    .map((a) => ({
-      ordem: ordemPorQuestaoId.get(a.questao_id as string) ?? 0,
+  const enunciadoAdaptadoPorQuestaoId = new Map(
+    (adaptacoes ?? [])
+      .filter((a) => a.verifier_aprovado === true || a.editado_pelo_professor === true)
+      .map((a) => [a.questao_id as string, a.enunciado_adaptado as string])
+  )
+
+  const questoesParaPdf: QuestaoParaPdf[] = questoes.map((q) => {
+    const enunciadoAdaptado = enunciadoAdaptadoPorQuestaoId.get(q.id as string)
+    return {
+      ordem: q.ordem as number,
+      adaptada: enunciadoAdaptado !== undefined,
       // ☐/□ (técnica checklist_progresso) não existem na fonte Helvetica
       // padrão do @react-pdf/renderer — saem em branco no PDF. Troca por
       // "[ ]" só no PDF; a tela do editor e o dado salvo continuam intactos.
-      enunciadoAdaptado: (a.enunciado_adaptado as string).replace(/[☐□]/g, '[ ]'),
-    }))
-    .sort((a, b) => a.ordem - b.ordem)
-
-  if (questoesParaPdf.length === 0) {
-    return {
-      sucesso: false,
-      erro: 'Nenhuma questão adaptada e aprovada para este aluno ainda.',
+      enunciado: enunciadoAdaptado
+        ? enunciadoAdaptado.replace(/[☐□]/g, '[ ]')
+        : (q.enunciado as string),
     }
-  }
+  })
 
   const dataGeracao = new Date().toLocaleDateString('pt-BR')
 

@@ -71,6 +71,12 @@ export function EditorProvaForm({
   const [gerandoPdf, setGerandoPdf] = useState(false)
   const [erroPdf, setErroPdf] = useState('')
 
+  // Mesmo critério do PDF (gerarPdfAdaptacoes): só conta como "adaptada"
+  // se aprovada pelo VERIFIER ou revisada manualmente pelo professor.
+  const questoesAdaptadasAprovadas = Object.values(adaptacoes).filter(
+    (a) => a.verifier_aprovado === true || a.editado_pelo_professor
+  ).length
+
   async function handleBaixarPdf() {
     setGerandoPdf(true)
     setErroPdf('')
@@ -154,14 +160,16 @@ export function EditorProvaForm({
         </p>
       ) : (
         <div className="space-y-4">
-          {Object.keys(adaptacoes).length > 0 && (
-            <div>
-              <BotaoPrimario onClick={handleBaixarPdf} carregando={gerandoPdf}>
-                Baixar PDF da prova adaptada
-              </BotaoPrimario>
-              {erroPdf && <MensagemErro texto={erroPdf} />}
-            </div>
-          )}
+          <div>
+            <p className="text-sm text-texto-secundario mb-2">
+              {questoesAdaptadasAprovadas} de {questoes.length}{' '}
+              {questoes.length === 1 ? 'questão adaptada' : 'questões adaptadas'} para este aluno
+            </p>
+            <BotaoPrimario onClick={handleBaixarPdf} carregando={gerandoPdf}>
+              Baixar PDF da prova completa
+            </BotaoPrimario>
+            {erroPdf && <MensagemErro texto={erroPdf} />}
+          </div>
 
           {questoes.map((questao) => (
             <QuestaoAdaptacao
