@@ -1,6 +1,7 @@
 import 'server-only'
 import { adaptarQuestao, type QuestaoParaAdaptar, type AdaptacaoQuestao, type ResultadoAdapter, type FeedbackTentativaAnterior } from '@/lib/agents/adapter'
 import { auditarAdaptacao, type Auditoria, type ResultadoVerifier } from '@/lib/agents/verifier'
+import { getBarreirasPorCodigos, type Barreira } from '@/lib/barreiras'
 
 // ORQUESTRADOR — código próprio, sem framework (ver CLAUDE.md, seção
 // Arquitetura: "Não usar LangGraph, CrewAI ou similar. Peso morto num app
@@ -42,6 +43,28 @@ export type ResultadoOrquestracao =
     }
   | { sucesso: false; erro: string; tentativas: TentativaOrquestracao[] }
 
+// Guardrail determinístico (mesmo padrão de enunciadoCurtoOuIgual em
+// verifier.ts): a UNIÃO de técnicas candidatas no ADAPTER não garante que
+// CADA barreira do aluno tenha, de fato, pelo menos uma técnica sua
+// aplicada — o modelo pode cobrir as barreiras "óbvias" (layout) e esquecer
+// as mais sutis. Verificado em código, antes de gastar uma chamada cara ao
+// VERIFIER, que reprovaria de qualquer forma em "barreirasAtendidas".
+function encontrarBarreirasSemCobertura(barreiras: Barreira[], tecnicasAplicadas: string[]): Barreira[] {
+  const aplicadas = new Set(tecnicasAplicadas)
+  return barreiras.filter(
+    (b) => b.tecnicas_indicadas.length > 0 && !b.tecnicas_indicadas.some((t) => aplicadas.has(t))
+  )
+}
+
+function montarMotivoCoberturaBarreiras(barreirasFaltantes: Barreira[]): string {
+  return barreirasFaltantes
+    .map(
+      (b) =>
+        `A barreira ${b.codigo} (${b.nome_curto}) não teve nenhuma técnica sua aplicada. Técnicas esperadas para ela: ${b.tecnicas_indicadas.join(', ')}.`
+    )
+    .join(' ')
+}
+
 function montarFeedbackReprovacao(auditoria: Auditoria, itensReprovados: (keyof Auditoria)[]): string {
   const detalhes = itensReprovados
     .map((item) => `- ${item}${item === 'nivelDificuldadeMantido' ? ' (ITEM MAIS CRÍTICO)' : ''}: ${auditoria[item].motivo}`)
@@ -80,6 +103,12 @@ export async function orquestrarAdaptacao(
   let ultimaAdaptacao: AdaptacaoQuestao | null = null
   let motivoUltimaReprovacao = ''
 
+  // Códigos inválidos são rejeitados pelo próprio adaptarQuestao() na
+  // primeira chamada (ver bloco de falha do ADAPTER abaixo) — por isso é
+  // seguro resolver os objetos Barreira aqui, antes do loop, e reutilizar
+  // em todas as tentativas.
+  const barreiras = getBarreirasPorCodigos(barreirasCodigos)
+
   for (let numero = 1; numero <= MAX_TENTATIVAS_ORQUESTRADOR; numero++) {
     console.log(`[ORQUESTRADOR] tentativa ${numero}/${MAX_TENTATIVAS_ORQUESTRADOR} — chamando ADAPTER${feedbackEstruturado ? ' (com feedback da reprovação anterior)' : ''}`)
 
@@ -105,7 +134,36 @@ export async function orquestrarAdaptacao(
     }
 
     ultimaAdaptacao = resultadoAdapter.adaptacao
-    console.log(`[ORQUESTRADOR] tentativa ${numero} — ADAPTER produziu adaptação, chamando VERIFIER`)
+
+    const barreirasSemCobertura = encontrarBarreirasSemCobertura(
+      barreiras,
+      resultadoAdapter.adaptacao.tecnicasAplicadas
+    )
+
+    if (barreirasSemCobertura.length > 0) {
+      const motivoCobertura = montarMotivoCoberturaBarreiras(barreirasSemCobertura)
+      console.log(`[ORQUESTRADOR] tentativa ${numero} — REPROVADO por cobertura de barreiras (determinístico, sem chamar VERIFIER): ${motivoCobertura}`)
+
+      motivoUltimaReprovacao = motivoCobertura
+      feedbackEstruturado = {
+        adaptacaoReprovada: resultadoAdapter.adaptacao,
+        itensReprovados: ['coberturaBarreiras'],
+        motivos: [motivoCobertura],
+      }
+      feedbackTextoParaLog = motivoCobertura
+
+      tentativas.push({
+        numero,
+        feedbackRecebido: feedbackTextoParaLog,
+        resultadoAdapter,
+        resultadoVerifier: null,
+        aprovado: false,
+      })
+
+      continue
+    }
+
+    console.log(`[ORQUESTRADOR] tentativa ${numero} — ADAPTER produziu adaptação com cobertura de barreiras OK, chamando VERIFIER`)
 
     const resultadoVerifier = await auditarAdaptacao(questao, resultadoAdapter.adaptacao, barreirasCodigos)
 

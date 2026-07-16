@@ -199,9 +199,10 @@ function montarBlocoQuestao(questao: QuestaoParaAdaptar): string {
   return partes.join('\n')
 }
 
-// Guardrail determinístico (CLAUDE.md): números do original vs. adaptado
-// nunca podem mudar. Comparação por contagem, não por posição — permite
-// reordenar alternativas sem acusar falso positivo.
+// Guardrail determinístico (CLAUDE.md): "Números do original vs adaptado:
+// regex. Se mudou → bloqueia." O risco real é a adaptação PERDER ou ALTERAR
+// um número do problema (mudar "12-4", remover uma alternativa) — isso muda o
+// que está sendo avaliado (R1/R2).
 function extrairNumeros(texto: string): string[] {
   return texto.match(/\d+(?:[.,]\d+)?/g) ?? []
 }
@@ -217,12 +218,28 @@ function contarNumeros(partes: (string | null)[]): Map<string, number> {
   return contagem
 }
 
-function numerosDivergem(original: Map<string, number>, adaptado: Map<string, number>): boolean {
-  if (original.size !== adaptado.size) return true
+// Retorna os números do original que SUMIRAM (ou tiveram a contagem reduzida)
+// no adaptado. É uma checagem de SUBCONJUNTO, não de igualdade exata: todo
+// número do problema tem que continuar presente, mas números EXTRA no
+// adaptado são permitidos.
+//
+// Motivo (bug real de teste): a técnica instrucao_passo_a_passo_numerada
+// injeta ordinais estruturais ("1.", "2.", "3.") no enunciado. Uma igualdade
+// exata contava esses ordinais como se fossem números do problema e disparava
+// falso positivo — bloqueando a própria técnica de acessibilidade. Ordinais só
+// ADICIONAM números, nunca removem os do problema, então o subconjunto os
+// tolera. O caso oposto — ADICIONAR um número de conteúdo indevido (revelar a
+// resposta, inflar o problema) — é território do VERIFIER
+// (respostaCorretaMantida / nivelDificuldadeMantido), não deste guardrail.
+function numerosDeConteudoPerdidos(
+  original: Map<string, number>,
+  adaptado: Map<string, number>
+): string[] {
+  const perdidos: string[] = []
   for (const [numero, quantidade] of original) {
-    if (adaptado.get(numero) !== quantidade) return true
+    if ((adaptado.get(numero) ?? 0) < quantidade) perdidos.push(numero)
   }
-  return false
+  return perdidos
 }
 
 export async function adaptarQuestao(
@@ -325,7 +342,8 @@ export async function adaptarQuestao(
         tool_choice: { type: 'tool', name: NOME_FERRAMENTA },
         messages: mensagens,
       })
-    } catch {
+    } catch (erro) {
+      console.error(`[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — falha na chamada à API Anthropic:`, erro)
       return {
         sucesso: false,
         erro: 'Falha ao chamar o modelo de IA. Tente novamente em instantes.',
@@ -341,6 +359,10 @@ export async function adaptarQuestao(
     )
 
     if (!blocoFerramenta) {
+      console.warn(
+        `[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — resposta sem bloco tool_use. stop_reason: ${resposta.stop_reason}. content:`,
+        JSON.stringify(resposta.content)
+      )
       mensagens.push(
         { role: 'assistant', content: resposta.content },
         {
@@ -357,6 +379,11 @@ export async function adaptarQuestao(
       const mensagensErro = validacao.error.issues
         .map((issue) => `- ${issue.path.join('.')}: ${issue.message}`)
         .join('\n')
+
+      console.warn(
+        `[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — validação Zod falhou:\n${mensagensErro}\ninput bruto do modelo:`,
+        JSON.stringify(blocoFerramenta.input)
+      )
 
       mensagens.push(
         { role: 'assistant', content: resposta.content },
@@ -379,8 +406,12 @@ export async function adaptarQuestao(
       validacao.data.enunciadoAdaptado,
       ...(validacao.data.alternativasAdaptadas ?? []),
     ])
+    const numerosPerdidos = numerosDeConteudoPerdidos(numerosOriginais, numerosAdaptados)
 
-    if (numerosDivergem(numerosOriginais, numerosAdaptados)) {
+    if (numerosPerdidos.length > 0) {
+      console.warn(
+        `[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — número(s) do problema perdido(s)/alterado(s): [${numerosPerdidos.join(', ')}]. Original: [${[...numerosOriginais.keys()].join(', ')}]. Adaptado: [${[...numerosAdaptados.keys()].join(', ')}].`
+      )
       mensagens.push(
         { role: 'assistant', content: resposta.content },
         {
@@ -390,7 +421,7 @@ export async function adaptarQuestao(
               type: 'tool_result',
               tool_use_id: blocoFerramenta.id,
               is_error: true,
-              content: `Os números da questão adaptada não podem ser diferentes dos números do original. Original: [${[...numerosOriginais.keys()].join(', ')}]. Adaptado: [${[...numerosAdaptados.keys()].join(', ')}]. Corrija e chame a ferramenta ${NOME_FERRAMENTA} novamente, preservando exatamente os mesmos números.`,
+              content: `A questão adaptada perdeu ou alterou número(s) do problema: [${numerosPerdidos.join(', ')}]. Todo número do enunciado e das alternativas originais precisa continuar presente, sem mudança de valor. Corrija e chame a ferramenta ${NOME_FERRAMENTA} novamente. Você PODE adicionar numeração de passos ("1.", "2."), mas NUNCA remover ou alterar os números do problema.`,
             },
           ],
         }
@@ -415,6 +446,10 @@ export async function adaptarQuestao(
       },
     }
   }
+
+  console.error(
+    `[ADAPTER] esgotadas ${MAX_TENTATIVAS} tentativas internas sem produzir uma adaptação válida — ver os avisos [ADAPTER] acima para a causa real de cada tentativa.`
+  )
 
   return {
     sucesso: false,
