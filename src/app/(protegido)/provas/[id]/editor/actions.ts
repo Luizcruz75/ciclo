@@ -1,9 +1,12 @@
 'use server'
 
+import { renderToBuffer } from '@react-pdf/renderer'
 import { createClient } from '@/lib/supabase/server'
 import { orquestrarAdaptacao, type ResultadoOrquestracao } from '@/lib/orchestrator'
 import { getBarreirasPorCodigos } from '@/lib/barreiras'
 import { getCodigosInteressesValidos } from '@/lib/interesses'
+import { NOME_ESCOLA } from '@/lib/config'
+import { ProvaAdaptadaDocument, type QuestaoParaPdf } from '@/lib/pdf/ProvaAdaptadaDocument'
 
 // Passo 9-10 do fluxo (SDD §3): professor escolhe o aluno para uma questão
 // específica, o orquestrador roda o ciclo ADAPTER↔VERIFIER (até 3
@@ -188,4 +191,124 @@ export async function registrarEvidencia(input: {
   }
 
   return { sucesso: true }
+}
+
+// Gera o PDF da prova adaptada para 1 aluno, sob demanda (nunca pré-gerado
+// nem salvo). Inclui todas as questões daquela prova que já têm adaptação
+// aprovada pelo VERIFIER ou revisada manualmente pelo professor — nunca
+// entregamos ao aluno, silenciosamente, uma adaptação reprovada e não
+// revisada (mesma regra do orquestrador: CLAUDE.md).
+export async function gerarPdfAdaptacoes(input: {
+  provaId: string
+  alunoId: string
+}): Promise<
+  | { sucesso: true; pdfBase64: string; nomeArquivo: string }
+  | { sucesso: false; erro: string }
+> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    return { sucesso: false, erro: 'Sessão expirada. Faça login novamente.' }
+  }
+
+  const { data: prova, error: erroProva } = await supabase
+    .from('provas')
+    .select('titulo, materia, ano_escolar')
+    .eq('id', input.provaId)
+    .single()
+
+  if (erroProva || !prova) {
+    return { sucesso: false, erro: 'Prova não encontrada.' }
+  }
+
+  const { data: aluno, error: erroAluno } = await supabase
+    .from('alunos')
+    .select('nome_completo')
+    .eq('id', input.alunoId)
+    .single()
+
+  if (erroAluno || !aluno) {
+    return { sucesso: false, erro: 'Aluno não encontrado.' }
+  }
+
+  const { data: professor } = await supabase
+    .from('professores')
+    .select('nome')
+    .eq('id', user.id)
+    .single()
+
+  // Nunca pode quebrar a geração do PDF por falta do nome do professor.
+  const nomeProfessor = professor?.nome?.trim() || user.email || 'Professor(a) responsável'
+
+  const { data: questoes, error: erroQuestoes } = await supabase
+    .from('questoes')
+    .select('id, ordem')
+    .eq('prova_id', input.provaId)
+    .order('ordem')
+
+  if (erroQuestoes || !questoes || questoes.length === 0) {
+    return { sucesso: false, erro: 'Esta prova não tem questões.' }
+  }
+
+  const questaoIds = questoes.map((q) => q.id as string)
+  const ordemPorQuestaoId = new Map(questoes.map((q) => [q.id as string, q.ordem as number]))
+
+  const { data: adaptacoes, error: erroAdaptacoes } = await supabase
+    .from('adaptacoes')
+    .select('questao_id, enunciado_adaptado, verifier_aprovado, editado_pelo_professor')
+    .eq('aluno_id', input.alunoId)
+    .in('questao_id', questaoIds)
+
+  if (erroAdaptacoes) {
+    return { sucesso: false, erro: 'Não foi possível carregar as adaptações.' }
+  }
+
+  const questoesParaPdf: QuestaoParaPdf[] = (adaptacoes ?? [])
+    .filter((a) => a.verifier_aprovado === true || a.editado_pelo_professor === true)
+    .map((a) => ({
+      ordem: ordemPorQuestaoId.get(a.questao_id as string) ?? 0,
+      // ☐/□ (técnica checklist_progresso) não existem na fonte Helvetica
+      // padrão do @react-pdf/renderer — saem em branco no PDF. Troca por
+      // "[ ]" só no PDF; a tela do editor e o dado salvo continuam intactos.
+      enunciadoAdaptado: (a.enunciado_adaptado as string).replace(/[☐□]/g, '[ ]'),
+    }))
+    .sort((a, b) => a.ordem - b.ordem)
+
+  if (questoesParaPdf.length === 0) {
+    return {
+      sucesso: false,
+      erro: 'Nenhuma questão adaptada e aprovada para este aluno ainda.',
+    }
+  }
+
+  const dataGeracao = new Date().toLocaleDateString('pt-BR')
+
+  const buffer = await renderToBuffer(
+    ProvaAdaptadaDocument({
+      nomeEscola: NOME_ESCOLA,
+      nomeProfessor,
+      nomeAluno: aluno.nome_completo as string,
+      tituloProva: prova.titulo as string,
+      materia: prova.materia as string,
+      anoEscolar: prova.ano_escolar as number,
+      questoes: questoesParaPdf,
+      dataGeracao,
+    })
+  )
+
+  const nomeArquivo = `${prova.titulo}-${aluno.nome_completo}`
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase()
+
+  return {
+    sucesso: true,
+    pdfBase64: buffer.toString('base64'),
+    nomeArquivo: `${nomeArquivo || 'prova-adaptada'}.pdf`,
+  }
 }

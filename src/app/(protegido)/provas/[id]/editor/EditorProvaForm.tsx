@@ -3,7 +3,12 @@
 import { useState } from 'react'
 import type { ResultadoOrquestracao } from '@/lib/orchestrator'
 import { Breadcrumb } from '@/components/Breadcrumb'
-import { adaptarQuestaoParaAluno, salvarEdicaoAdaptacao, registrarEvidencia } from './actions'
+import {
+  adaptarQuestaoParaAluno,
+  salvarEdicaoAdaptacao,
+  registrarEvidencia,
+  gerarPdfAdaptacoes,
+} from './actions'
 
 type Prova = { id: string; titulo: string; materia: string; ano_escolar: number }
 type Questao = {
@@ -63,6 +68,34 @@ export function EditorProvaForm({
     return mapa
   })
 
+  const [gerandoPdf, setGerandoPdf] = useState(false)
+  const [erroPdf, setErroPdf] = useState('')
+
+  async function handleBaixarPdf() {
+    setGerandoPdf(true)
+    setErroPdf('')
+
+    const resposta = await gerarPdfAdaptacoes({ provaId: prova.id, alunoId: alunoSelecionadoId })
+
+    setGerandoPdf(false)
+
+    if (!resposta.sucesso) {
+      setErroPdf(resposta.erro)
+      return
+    }
+
+    const bytes = Uint8Array.from(atob(resposta.pdfBase64), (c) => c.charCodeAt(0))
+    const blob = new Blob([bytes], { type: 'application/pdf' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = resposta.nomeArquivo
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    URL.revokeObjectURL(url)
+  }
+
   function handleTrocarAluno(novoAlunoId: string) {
     setAlunoSelecionadoId(novoAlunoId)
     const mapa: Record<string, AdaptacaoExistente> = {}
@@ -121,6 +154,15 @@ export function EditorProvaForm({
         </p>
       ) : (
         <div className="space-y-4">
+          {Object.keys(adaptacoes).length > 0 && (
+            <div>
+              <BotaoPrimario onClick={handleBaixarPdf} carregando={gerandoPdf}>
+                Baixar PDF da prova adaptada
+              </BotaoPrimario>
+              {erroPdf && <MensagemErro texto={erroPdf} />}
+            </div>
+          )}
+
           {questoes.map((questao) => (
             <QuestaoAdaptacao
               key={questao.id}

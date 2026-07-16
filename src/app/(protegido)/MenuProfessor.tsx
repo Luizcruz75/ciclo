@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export function MenuProfessor({ nome }: { nome: string }) {
   const [aberto, setAberto] = useState(false)
@@ -71,6 +72,13 @@ export function MenuProfessor({ nome }: { nome: string }) {
 
       {aberto && (
         <div className="absolute right-0 top-full mt-1 w-40 bg-superficie border border-linha rounded-card shadow-[var(--shadow-card)] py-1 z-10">
+          <Link
+            href="/perfil"
+            onClick={() => setAberto(false)}
+            className="w-full text-left h-11 px-3 flex items-center text-sm text-tinta hover:bg-linha/50 transition-colors duration-150 focus-visible:outline-none focus-visible:bg-linha/50"
+          >
+            Meu perfil
+          </Link>
           <button
             type="button"
             onClick={sair}
