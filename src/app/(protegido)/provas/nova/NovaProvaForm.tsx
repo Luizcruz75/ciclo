@@ -534,12 +534,13 @@ function BotaoPrimario({
       type="button"
       onClick={onClick}
       disabled={carregando}
-      className="w-full h-11 bg-indigo hover:bg-indigo-escuro text-white text-sm font-medium rounded-botao disabled:opacity-50 flex items-center justify-center gap-2"
+      className="w-full h-11 bg-indigo hover:bg-indigo-escuro text-white text-sm font-medium rounded-botao disabled:opacity-50 flex items-center justify-center"
     >
-      {carregando && (
+      {carregando ? (
         <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+      ) : (
+        children
       )}
-      {children}
     </button>
   )
 }

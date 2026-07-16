@@ -17,7 +17,8 @@ export default function LoginPage() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   )
 
-  async function handleSubmit() {
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
     setCarregando(true)
     setErro('')
 
@@ -43,45 +44,57 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded-xl shadow-sm w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-papel">
+      <div className="bg-superficie border border-linha rounded-card shadow-[var(--shadow-card)] p-8 w-full max-w-sm">
+        <h1 className="font-[family-name:var(--font-display)] text-2xl font-semibold text-tinta mb-6">
           {modo === 'login' ? 'Entrar no Ciclo' : 'Criar conta'}
         </h1>
 
-        <div className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
             placeholder="Seu e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-11 border border-linha rounded-botao px-4 text-sm bg-superficie text-tinta focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15"
           />
           <input
             type="password"
             placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
-            className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-11 border border-linha rounded-botao px-4 text-sm bg-superficie text-tinta focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15"
           />
 
-          {erro && <p className="text-red-500 text-sm">{erro}</p>}
+          {erro && (
+            <p className="text-sm text-erro flex items-center gap-1.5">
+              <span aria-hidden>⚠</span>
+              {erro}
+            </p>
+          )}
 
           <button
-            onClick={handleSubmit}
+            type="submit"
             disabled={carregando}
-            className="w-full bg-blue-600 text-white rounded-lg py-3 text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+            className="w-full h-11 bg-indigo hover:bg-indigo-escuro text-white text-sm font-medium rounded-botao disabled:opacity-50 flex items-center justify-center"
           >
-            {carregando ? 'Aguarde...' : modo === 'login' ? 'Entrar' : 'Criar conta'}
+            {carregando ? (
+              <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+            ) : modo === 'login' ? (
+              'Entrar'
+            ) : (
+              'Criar conta'
+            )}
           </button>
 
           <button
+            type="button"
             onClick={() => setModo(modo === 'login' ? 'cadastro' : 'login')}
-            className="w-full text-sm text-gray-500 hover:text-gray-700"
+            className="w-full text-sm text-texto-secundario hover:text-tinta"
           >
             {modo === 'login' ? 'Criar conta nova' : 'Já tenho conta'}
           </button>
-        </div>
+        </form>
       </div>
     </div>
   )
