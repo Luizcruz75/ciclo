@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import Link from 'next/link'
 import type { ResultadoOrquestracao } from '@/lib/orchestrator'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import {
@@ -70,6 +71,19 @@ export function EditorProvaForm({
 
   const [gerandoPdf, setGerandoPdf] = useState(false)
   const [erroPdf, setErroPdf] = useState('')
+
+  const selectAlunoRef = useRef<HTMLSelectElement>(null)
+  const [destaqueSelectAluno, setDestaqueSelectAluno] = useState(false)
+
+  // A mesma prova costuma ser adaptada para vários alunos da turma — em vez
+  // de recarregar a página, leva o professor de volta ao seletor com um
+  // destaque temporário para deixar claro o que mudou.
+  function handleAdaptarOutroAluno() {
+    selectAlunoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    selectAlunoRef.current?.focus()
+    setDestaqueSelectAluno(true)
+    setTimeout(() => setDestaqueSelectAluno(false), 1500)
+  }
 
   // Mesmo critério do PDF (gerarPdfAdaptacoes): só conta como "adaptada"
   // se aprovada pelo VERIFIER ou revisada manualmente pelo professor.
@@ -141,9 +155,12 @@ export function EditorProvaForm({
           Adaptar para
         </label>
         <select
+          ref={selectAlunoRef}
           value={alunoSelecionadoId}
           onChange={(e) => handleTrocarAluno(e.target.value)}
-          className="w-full h-11 border border-linha rounded-botao px-4 text-sm bg-superficie text-tinta focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15"
+          className={`w-full h-11 border rounded-botao px-4 text-sm bg-superficie text-tinta transition-shadow duration-300 focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15 ${
+            destaqueSelectAluno ? 'border-indigo ring-2 ring-indigo/20' : 'border-linha'
+          }`}
         >
           <option value="">Selecione um aluno...</option>
           {alunos.map((aluno) => (
@@ -191,6 +208,22 @@ export function EditorProvaForm({
               }
             />
           ))}
+
+          <div className="pt-6 border-t border-linha flex items-center justify-between gap-4 flex-wrap">
+            <BotaoSecundario onClick={handleAdaptarOutroAluno}>
+              Adaptar para outro aluno
+            </BotaoSecundario>
+
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-texto-secundario">Tudo salvo.</span>
+              <Link
+                href="/painel"
+                className="h-10 px-4 bg-indigo hover:bg-indigo-escuro text-white text-sm font-medium rounded-botao inline-flex items-center justify-center"
+              >
+                Voltar ao painel
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </div>
