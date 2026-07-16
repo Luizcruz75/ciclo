@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { toJSONSchema } from 'zod'
 import Anthropic from '@anthropic-ai/sdk'
 import { getAnthropicClient, MODELOS } from '@/lib/anthropic/client'
+import { descreverErroAnthropic } from '@/lib/anthropic/erro'
 import { getHabilidadePorCodigo } from '@/lib/bncc'
 import { getCodigosBarreirasValidos, getBarreirasPorCodigos, type Barreira } from '@/lib/barreiras'
 import { getCodigosInteressesValidos, getInteressesPorCodigos, type Interesse } from '@/lib/interesses'
@@ -343,10 +344,11 @@ export async function adaptarQuestao(
         messages: mensagens,
       })
     } catch (erro) {
-      console.error(`[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — falha na chamada à API Anthropic:`, erro)
+      const { mensagem, detalhe } = descreverErroAnthropic(erro)
+      console.error(`[ADAPTER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — falha na chamada à API Anthropic: ${detalhe}`)
       return {
         sucesso: false,
-        erro: 'Falha ao chamar o modelo de IA. Tente novamente em instantes.',
+        erro: mensagem,
         tentativas: tentativa,
       }
     }

@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { toJSONSchema } from 'zod'
 import Anthropic from '@anthropic-ai/sdk'
 import { getAnthropicClient, MODELOS } from '@/lib/anthropic/client'
+import { descreverErroAnthropic } from '@/lib/anthropic/erro'
 import { getHabilidadePorCodigo } from '@/lib/bncc'
 import { getCodigosBarreirasValidos, getBarreirasPorCodigos, type Barreira } from '@/lib/barreiras'
 import { sanitizarTextoColado } from '@/lib/guardrails/sanitizacao'
@@ -203,10 +204,12 @@ export async function escreverPei(
         tool_choice: { type: 'tool', name: NOME_FERRAMENTA },
         messages: mensagens,
       })
-    } catch {
+    } catch (erro) {
+      const { mensagem, detalhe } = descreverErroAnthropic(erro)
+      console.error(`[PEI-WRITER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — falha na chamada à API Anthropic: ${detalhe}`)
       return {
         sucesso: false,
-        erro: 'Falha ao chamar o modelo de IA. Tente novamente em instantes.',
+        erro: mensagem,
         tentativas: tentativa,
       }
     }

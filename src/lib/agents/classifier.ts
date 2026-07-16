@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { toJSONSchema } from 'zod'
 import Anthropic from '@anthropic-ai/sdk'
 import { getAnthropicClient, MODELOS } from '@/lib/anthropic/client'
+import { descreverErroAnthropic } from '@/lib/anthropic/erro'
 import { getHabilidadesCandidatas, type Habilidade, type Materia } from '@/lib/bncc'
 
 // CLASSIFIER — segundo agente do orquestrador (ver CLAUDE.md, seção Arquitetura).
@@ -140,10 +141,12 @@ export async function classificarQuestao(
         tool_choice: { type: 'tool', name: NOME_FERRAMENTA },
         messages: mensagens,
       })
-    } catch {
+    } catch (erro) {
+      const { mensagem, detalhe } = descreverErroAnthropic(erro)
+      console.error(`[CLASSIFIER] tentativa interna ${tentativa}/${MAX_TENTATIVAS} — falha na chamada à API Anthropic: ${detalhe}`)
       return {
         sucesso: false,
-        erro: 'Falha ao chamar o modelo de IA. Tente novamente em instantes.',
+        erro: mensagem,
         tentativas: tentativa,
       }
     }

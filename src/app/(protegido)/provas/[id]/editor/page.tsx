@@ -2,6 +2,12 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { EditorProvaForm } from './EditorProvaForm'
 
+// O ciclo ADAPTER->VERIFIER pode rodar até 3 tentativas em sequência, cada
+// uma com 1-2 chamadas Sonnet — mais que o timeout padrão de função da
+// Vercel. 60s é o teto do plano Hobby; se o projeto estiver em Pro, dá para
+// subir mais.
+export const maxDuration = 60
+
 export default async function EditorProvaPage({
   params,
 }: {
