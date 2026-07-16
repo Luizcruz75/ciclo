@@ -18,7 +18,12 @@ export function getAnthropicClient(): Anthropic {
     if (!apiKey) {
       throw new Error('ANTHROPIC_API_KEY não configurada no ambiente do servidor.')
     }
-    clienteAnthropic = new Anthropic({ apiKey })
+    // maxRetries acima do padrão (2): logs de produção mostraram vários
+    // 529 overloaded_error seguidos vindos da própria API da Anthropic
+    // (x-should-retry: true) — não é chave, rate limit ou timeout nosso,
+    // é sobrecarga transitória do lado deles. Mais tentativas com backoff
+    // aumenta a chance de passar por uma janela curta de instabilidade.
+    clienteAnthropic = new Anthropic({ apiKey, maxRetries: 5 })
   }
   return clienteAnthropic
 }
