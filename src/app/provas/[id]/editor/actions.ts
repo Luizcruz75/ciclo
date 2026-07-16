@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { orquestrarAdaptacao, type ResultadoOrquestracao } from '@/lib/orchestrator'
 import { getBarreirasPorCodigos } from '@/lib/barreiras'
+import { getCodigosInteressesValidos } from '@/lib/interesses'
 
 // Passo 9-10 do fluxo (SDD §3): professor escolhe o aluno para uma questão
 // específica, o orquestrador roda o ciclo ADAPTER↔VERIFIER (até 3
@@ -59,12 +60,22 @@ export async function adaptarQuestaoParaAluno(input: {
   // ele simplesmente não entra na lista, sem quebrar a adaptação.
   const barreirasValidadas = getBarreirasPorCodigos(barreirasCodigos).map((b) => b.codigo)
 
-  // TODO: interesses do aluno (data/interesses.json v0.1, 24 itens) ainda
-  // não tem tabela própria no banco — documentado em modelo-de-dados.md
-  // §4.2 mas nunca implementado como migration. Até existir, o ADAPTER roda
-  // sem essa técnica de contextualização (campo semântico ainda funciona
-  // normalmente, só não usa o interesse específico do aluno).
-  const interessesCodigos: string[] = []
+  const { data: interessesAluno, error: erroInteresses } = await supabase
+    .from('interesses_aluno')
+    .select('interesse_codigo')
+    .eq('aluno_id', input.alunoId)
+
+  if (erroInteresses) {
+    return { sucesso: false, erro: 'Não foi possível carregar os interesses do aluno.' }
+  }
+
+  // getCodigosInteressesValidos valida contra a lista fechada (mesmo padrão
+  // de barreiras acima) — código no banco que não existir mais no JSON
+  // curado simplesmente não entra, sem quebrar a adaptação.
+  const codigosInteressesValidos = getCodigosInteressesValidos()
+  const interessesCodigos = (interessesAluno ?? [])
+    .map((i) => i.interesse_codigo as string)
+    .filter((codigo) => codigosInteressesValidos.has(codigo))
 
   const resultado = await orquestrarAdaptacao(
     {
@@ -143,6 +154,37 @@ export async function salvarEdicaoAdaptacao(input: {
 
   if (error) {
     return { sucesso: false, erro: 'Não foi possível salvar a edição.' }
+  }
+
+  return { sucesso: true }
+}
+
+// Feedback binário pós-adaptação (PRD §5: "o sinal mais valioso"). Grava em
+// `evidencias`, tabela que já existia desde 0001_schema_inicial.sql — só
+// usamos aluno_id + adaptacao_id + funcionou por enquanto; nota_obtida vs
+// nota_turma_media fica para depois (fora do escopo desta tarefa).
+export async function registrarEvidencia(input: {
+  adaptacaoId: string
+  alunoId: string
+  funcionou: boolean
+}): Promise<{ sucesso: true } | { sucesso: false; erro: string }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    return { sucesso: false, erro: 'Sessão expirada. Faça login novamente.' }
+  }
+
+  const { error } = await supabase.from('evidencias').insert({
+    aluno_id: input.alunoId,
+    adaptacao_id: input.adaptacaoId,
+    funcionou: input.funcionou,
+  })
+
+  if (error) {
+    return { sucesso: false, erro: 'Não foi possível registrar o feedback.' }
   }
 
   return { sucesso: true }

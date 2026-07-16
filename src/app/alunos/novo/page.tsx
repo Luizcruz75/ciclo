@@ -1,7 +1,9 @@
 import { getGruposBarreiras } from '@/lib/barreiras'
+import { getInteressesAgrupados } from '@/lib/interesses'
 import { CadastroAlunoForm } from './CadastroAlunoForm'
 
 export default function NovoAlunoPage() {
   const grupos = getGruposBarreiras()
-  return <CadastroAlunoForm grupos={grupos} />
+  const categoriasInteresses = getInteressesAgrupados()
+  return <CadastroAlunoForm grupos={grupos} categoriasInteresses={categoriasInteresses} />
 }

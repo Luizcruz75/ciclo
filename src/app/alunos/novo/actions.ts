@@ -12,6 +12,8 @@ export async function criarAluno(input: {
   nomeCompleto: string
   anoEscolar: number
   barreiraCodigos: string[]
+  interesseCodigos: string[]
+  consentimentoResponsavel: boolean
 }): Promise<ResultadoCadastro> {
   const parsed = cadastroAlunoSchema.safeParse(input)
 
@@ -19,7 +21,7 @@ export async function criarAluno(input: {
     return { sucesso: false, erro: parsed.error.issues[0]?.message ?? 'Dados inválidos.' }
   }
 
-  const { nomeCompleto, anoEscolar, barreiraCodigos } = parsed.data
+  const { nomeCompleto, anoEscolar, barreiraCodigos, interesseCodigos } = parsed.data
   const supabase = await createClient()
 
   const {
@@ -35,6 +37,7 @@ export async function criarAluno(input: {
     p_iniciais: derivarIniciais(nomeCompleto),
     p_ano_escolar: anoEscolar,
     p_barreira_codigos: barreiraCodigos,
+    p_interesse_codigos: interesseCodigos,
   })
 
   if (error) {

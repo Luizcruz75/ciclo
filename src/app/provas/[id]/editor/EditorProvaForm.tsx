@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import type { ResultadoOrquestracao } from '@/lib/orchestrator'
-import { adaptarQuestaoParaAluno, salvarEdicaoAdaptacao } from './actions'
+import { adaptarQuestaoParaAluno, salvarEdicaoAdaptacao, registrarEvidencia } from './actions'
 
 type Prova = { id: string; titulo: string; materia: string; ano_escolar: number }
 type Questao = {
@@ -26,17 +26,20 @@ type AdaptacaoExistente = {
   verifier_alerta: string | null
   editado_pelo_professor: boolean
 }
+type EvidenciaExistente = { adaptacao_id: string; funcionou: boolean }
 
 export function EditorProvaForm({
   prova,
   questoes,
   alunos,
   adaptacoesExistentes,
+  evidenciasExistentes,
 }: {
   prova: Prova
   questoes: Questao[]
   alunos: Aluno[]
   adaptacoesExistentes: AdaptacaoExistente[]
+  evidenciasExistentes: EvidenciaExistente[]
 }) {
   const [alunoSelecionadoId, setAlunoSelecionadoId] = useState<string>('')
 
@@ -48,6 +51,14 @@ export function EditorProvaForm({
     for (const a of adaptacoesExistentes) {
       if (a.aluno_id === alunoSelecionadoId) mapa[a.questao_id] = a
     }
+    return mapa
+  })
+
+  // Mapa adaptacaoId -> funcionou, atualizado localmente assim que o
+  // professor dá o feedback (sem recarregar a página).
+  const [evidencias, setEvidencias] = useState<Record<string, boolean>>(() => {
+    const mapa: Record<string, boolean> = {}
+    for (const e of evidenciasExistentes) mapa[e.adaptacao_id] = e.funcionou
     return mapa
   })
 
@@ -113,11 +124,17 @@ export function EditorProvaForm({
               questao={questao}
               alunoId={alunoSelecionadoId}
               adaptacaoExistente={adaptacoes[questao.id]}
+              evidenciaExistente={
+                adaptacoes[questao.id] ? evidencias[adaptacoes[questao.id].id] : undefined
+              }
               onAdaptacaoGerada={(adaptacao) =>
                 setAdaptacoes((atual) => ({ ...atual, [questao.id]: adaptacao }))
               }
               onAdaptacaoEditada={(adaptacaoAtualizada) =>
                 setAdaptacoes((atual) => ({ ...atual, [questao.id]: adaptacaoAtualizada }))
+              }
+              onEvidenciaRegistrada={(adaptacaoId, funcionou) =>
+                setEvidencias((atual) => ({ ...atual, [adaptacaoId]: funcionou }))
               }
             />
           ))}
@@ -131,20 +148,46 @@ function QuestaoAdaptacao({
   questao,
   alunoId,
   adaptacaoExistente,
+  evidenciaExistente,
   onAdaptacaoGerada,
   onAdaptacaoEditada,
+  onEvidenciaRegistrada,
 }: {
   questao: Questao
   alunoId: string
   adaptacaoExistente: AdaptacaoExistente | undefined
+  evidenciaExistente: boolean | undefined
   onAdaptacaoGerada: (a: AdaptacaoExistente) => void
   onAdaptacaoEditada: (a: AdaptacaoExistente) => void
+  onEvidenciaRegistrada: (adaptacaoId: string, funcionou: boolean) => void
 }) {
   const [carregando, setCarregando] = useState(false)
   const [erro, setErro] = useState('')
   const [editando, setEditando] = useState(false)
   const [textoEditado, setTextoEditado] = useState('')
   const [ultimoResultado, setUltimoResultado] = useState<ResultadoOrquestracao | null>(null)
+  const [enviandoFeedback, setEnviandoFeedback] = useState(false)
+
+  async function handleFeedback(funcionou: boolean) {
+    if (!adaptacaoExistente) return
+    setEnviandoFeedback(true)
+    setErro('')
+
+    const resultado = await registrarEvidencia({
+      adaptacaoId: adaptacaoExistente.id,
+      alunoId,
+      funcionou,
+    })
+
+    setEnviandoFeedback(false)
+
+    if (!resultado.sucesso) {
+      setErro(resultado.erro)
+      return
+    }
+
+    onEvidenciaRegistrada(adaptacaoExistente.id, funcionou)
+  }
 
   async function handleAdaptar() {
     setErro('')
@@ -321,6 +364,42 @@ function QuestaoAdaptacao({
               </>
             )}
           </div>
+
+          {!editando && (
+            <div className="mt-4 pt-4 border-t border-linha">
+              {evidenciaExistente === undefined ? (
+                <>
+                  <p className="text-[13px] font-medium text-tinta mb-2">
+                    Funcionou com o aluno?
+                  </p>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleFeedback(true)}
+                      disabled={enviandoFeedback}
+                      className="h-10 px-4 rounded-botao text-sm font-medium border border-linha text-tinta hover:border-salvia hover:text-salvia disabled:opacity-50"
+                    >
+                      👍 Funcionou
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleFeedback(false)}
+                      disabled={enviandoFeedback}
+                      className="h-10 px-4 rounded-botao text-sm font-medium border border-linha text-tinta hover:border-terracota hover:text-terracota disabled:opacity-50"
+                    >
+                      👎 Não funcionou
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <p
+                  className={`text-sm font-medium ${evidenciaExistente ? 'text-salvia' : 'text-terracota'}`}
+                >
+                  {evidenciaExistente ? '👍 Você marcou: funcionou' : '👎 Você marcou: não funcionou'}
+                </p>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>

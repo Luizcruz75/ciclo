@@ -48,12 +48,21 @@ export default async function EditorProvaPage({
     )
     .in('questao_id', questaoIds.length > 0 ? questaoIds : ['00000000-0000-0000-0000-000000000000'])
 
+  // Feedback (👍/👎) já registrado para essas adaptações — evita mostrar de
+  // novo os botões "Funcionou?" numa adaptação que já recebeu evidência.
+  const adaptacaoIds = (adaptacoesExistentes ?? []).map((a) => a.id)
+  const { data: evidenciasExistentes } = await supabase
+    .from('evidencias')
+    .select('adaptacao_id, funcionou')
+    .in('adaptacao_id', adaptacaoIds.length > 0 ? adaptacaoIds : ['00000000-0000-0000-0000-000000000000'])
+
   return (
     <EditorProvaForm
       prova={prova}
       questoes={questoes ?? []}
       alunos={alunos ?? []}
       adaptacoesExistentes={adaptacoesExistentes ?? []}
+      evidenciasExistentes={evidenciasExistentes ?? []}
     />
   )
 }
