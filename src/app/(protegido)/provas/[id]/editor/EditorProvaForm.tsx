@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { ResultadoOrquestracao } from '@/lib/orchestrator'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { adaptarQuestaoParaAluno, salvarEdicaoAdaptacao, registrarEvidencia } from './actions'
 
 type Prova = { id: string; titulo: string; materia: string; ano_escolar: number }
@@ -74,6 +75,7 @@ export function EditorProvaForm({
   if (alunos.length === 0) {
     return (
       <div className="max-w-2xl mx-auto py-12 px-6">
+        <Breadcrumb atual={prova.titulo} />
         <h1 className="font-[family-name:var(--font-display)] text-2xl font-semibold text-tinta mb-2">
           {prova.titulo}
         </h1>
@@ -87,6 +89,7 @@ export function EditorProvaForm({
 
   return (
     <div className="max-w-3xl mx-auto py-12 px-6">
+      <Breadcrumb atual={prova.titulo} />
       <h1 className="font-[family-name:var(--font-display)] text-2xl font-semibold text-tinta mb-1">
         {prova.titulo}
       </h1>

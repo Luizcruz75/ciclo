@@ -1,24 +1,33 @@
-import Link from 'next/link'
-import { BotaoSair } from '@/components/BotaoSair'
+import { createClient } from '@/lib/supabase/server'
+import { Header } from './Header'
 
 // Header persistente para toda tela logada. Middleware já garante que só
 // usuário autenticado chega aqui — este layout não repete a checagem de
-// sessão, só cuida do chrome visual comum (DESIGN.md §1: "cor carrega
-// ênfase", nenhuma decisão de acesso mora aqui.
-export default function LayoutProtegido({ children }: { children: React.ReactNode }) {
+// sessão, só busca o nome do professor (para o menu à direita) e monta o
+// chrome visual comum.
+export default async function LayoutProtegido({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  let nomeProfessor = ''
+  if (user) {
+    const { data: professor } = await supabase
+      .from('professores')
+      .select('nome')
+      .eq('id', user.id)
+      .single()
+    nomeProfessor = professor?.nome ?? ''
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b border-linha bg-superficie">
-        <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link
-            href="/painel"
-            className="font-[family-name:var(--font-display)] text-lg font-semibold text-tinta"
-          >
-            Ciclo
-          </Link>
-          <BotaoSair />
-        </div>
-      </header>
+      <Header nomeProfessor={nomeProfessor} />
       <main className="flex-1">{children}</main>
     </div>
   )

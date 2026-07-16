@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { getBarreirasPorCodigos, agruparBarreirasPorFamilia } from '@/lib/barreiras'
 import { getInteressesPorCodigos, agruparInteressesPorCategoria } from '@/lib/interesses'
+import { Breadcrumb } from '@/components/Breadcrumb'
 
 export default async function FichaAlunoPage({
   params,
@@ -48,6 +49,8 @@ export default async function FichaAlunoPage({
 
   return (
     <div className="max-w-2xl mx-auto py-12 px-6">
+      <Breadcrumb atual={aluno.nome_completo} />
+
       <div className="flex items-start justify-between gap-4 mb-8">
         <div>
           <h1 className="font-[family-name:var(--font-display)] text-2xl font-semibold text-tinta">
