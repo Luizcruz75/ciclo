@@ -54,18 +54,77 @@ const NOME_FERRAMENTA = 'registrar_auditoria'
 const MAX_TENTATIVAS = 3
 const MAX_TOKENS_RESPOSTA = 2048
 
+// Diagnóstico real (caso Beto, ATN-01+EXE-01+EXE-02): das reprovações por
+// enunciadoCurtoOuIgual, cerca de metade eram estrutura pura pedida pelas
+// próprias técnicas (marcador de checklist, prefixo numérico de passo, quebra
+// de linha entre passos) e a outra metade era enrolação real do modelo
+// (frases meta como "Leia com atenção.", "Questão 1 de 1" — que nenhuma
+// técnica pede). Um orçamento fixo de caracteres não distingue os dois casos
+// porque pesam igual em contagem; a correção tem que descontar especificamente
+// os padrões estruturais esperados, não afrouxar o limite de forma genérica.
+// Descabe SÓ para fins de comparação de tamanho — o texto realmente entregue
+// ao aluno não muda.
+const TECNICA_CHECKLIST = 'checklist_progresso'
+const TECNICA_PASSO_NUMERADO = 'instrucao_passo_a_passo_numerada'
+
+function comprimentoParaComparacao(texto: string, tecnicasAplicadas: string[]): number {
+  const temChecklist = tecnicasAplicadas.includes(TECNICA_CHECKLIST)
+  const temPassoNumerado = tecnicasAplicadas.includes(TECNICA_PASSO_NUMERADO)
+
+  if (!temChecklist && !temPassoNumerado) return texto.length
+
+  let comprimento = 0
+  let linhaAnteriorEraPasso = false
+
+  texto.split('\n').forEach((linha, indice) => {
+    let restante = linha
+    let eraPasso = false
+
+    if (temChecklist) {
+      const semMarcador = restante.replace(/^[ \t]*[☐□]\s*/, '')
+      if (semMarcador !== restante) eraPasso = true
+      restante = semMarcador
+    }
+
+    if (temPassoNumerado) {
+      const semNumero = restante.replace(/^[ \t]*\d+[.)]\s*/, '')
+      if (semNumero !== restante) eraPasso = true
+      restante = semNumero
+    }
+
+    comprimento += restante.length
+
+    // A quebra de linha entre dois passos estruturais reconhecidos (marcador
+    // e/ou numeração removidos em ambos os lados) é descontada. Qualquer
+    // outra quebra — antes/depois de frase meta, entre parágrafos — continua
+    // contando normalmente.
+    if (indice > 0 && !(eraPasso && linhaAnteriorEraPasso)) {
+      comprimento += 1
+    }
+
+    linhaAnteriorEraPasso = eraPasso
+  })
+
+  return comprimento
+}
+
 // Item "enunciadoCurtoOuIgual" (checklist do PRD) é computado em código, não
 // pedido ao modelo: comparar tamanho de string é determinístico, e o mesmo
 // guardrail já existe como alerta no ADAPTER (src/lib/agents/adapter.ts).
 // O VERIFIER não deve reimplementar em prompt algo que já é uma contagem
 // exata.
-function avaliarEnunciadoCurtoOuIgual(original: string, adaptado: string): ItemChecklist {
-  const aprovado = adaptado.length <= original.length
+function avaliarEnunciadoCurtoOuIgual(
+  original: string,
+  adaptado: string,
+  tecnicasAplicadas: string[]
+): ItemChecklist {
+  const comprimentoAdaptado = comprimentoParaComparacao(adaptado, tecnicasAplicadas)
+  const aprovado = comprimentoAdaptado <= original.length
   return {
     aprovado,
     motivo: aprovado
-      ? 'O enunciado adaptado tem o mesmo tamanho ou é menor que o original.'
-      : `O enunciado adaptado (${adaptado.length} caracteres) ficou maior que o original (${original.length} caracteres).`,
+      ? 'O enunciado adaptado tem o mesmo tamanho ou é menor que o original (descontada a estrutura esperada das técnicas ativas).'
+      : `O enunciado adaptado ficou maior que o original mesmo descontando a estrutura esperada das técnicas ativas (${comprimentoAdaptado} caracteres computados vs. ${original.length} do original; ${adaptado.length} caracteres brutos, sem desconto).`,
   }
 }
 
@@ -259,7 +318,8 @@ export async function auditarAdaptacao(
       ...validacao.data,
       enunciadoCurtoOuIgual: avaliarEnunciadoCurtoOuIgual(
         questaoOriginal.enunciado,
-        adaptacao.enunciadoAdaptado
+        adaptacao.enunciadoAdaptado,
+        adaptacao.tecnicasAplicadas
       ),
     }
 

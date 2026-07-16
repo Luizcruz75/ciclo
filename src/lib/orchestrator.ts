@@ -43,24 +43,63 @@ export type ResultadoOrquestracao =
     }
   | { sucesso: false; erro: string; tentativas: TentativaOrquestracao[] }
 
+// Técnicas cuja aplicação é puramente de LAYOUT/PDF (margem, borda, cor de
+// fundo, espaçamento entre linhas, grade, imagem) — não têm forma textual
+// legítima dentro de enunciadoAdaptado. Mesmo raciocínio do comentário no
+// topo de adapter.ts sobre G1/G2/G6 serem resolvidos na geração do PDF, não
+// na adaptação de texto: cobrar cobertura TEXTUAL dessas técnicas do ADAPTER
+// é uma exigência vazia, já que não há como o modelo "provar" no enunciado
+// que uma margem ficou mais ampla. Lista fechada, revisar se novas barreiras
+// forem cadastradas em data/barreiras.json.
+const TECNICAS_APENAS_LAYOUT = new Set([
+  'margens_amplas',
+  'borda_funcional_delimitadora',
+  'densidade_reduzida',
+  'alternativas_ao_lado',
+  'caixa_por_questao',
+  'checklist_progresso',
+  'quadriculado_dimensionado',
+  'espaco_em_branco',
+  'borda_simples_funcional',
+  'fundo_cinza_10',
+  'borda_grossa',
+  'caixa_em_volta',
+  'entrelinha_1_5',
+  'fonte_16_min',
+  'pictograma_verbo_comando',
+  'pictograma_substantivo_concreto',
+  'fracionar_prova',
+  'menos_questoes_por_pagina',
+  'sumario_no_topo',
+  'numero_questoes_visivel',
+  'caixa_delimita_inicio_e_fim',
+])
+
+function tecnicasTextuaisIndicadas(barreira: Barreira): string[] {
+  return barreira.tecnicas_indicadas.filter((t) => !TECNICAS_APENAS_LAYOUT.has(t))
+}
+
 // Guardrail determinístico (mesmo padrão de enunciadoCurtoOuIgual em
 // verifier.ts): a UNIÃO de técnicas candidatas no ADAPTER não garante que
 // CADA barreira do aluno tenha, de fato, pelo menos uma técnica sua
-// aplicada — o modelo pode cobrir as barreiras "óbvias" (layout) e esquecer
-// as mais sutis. Verificado em código, antes de gastar uma chamada cara ao
-// VERIFIER, que reprovaria de qualquer forma em "barreirasAtendidas".
+// aplicada — o modelo pode cobrir as barreiras "óbvias" e esquecer as mais
+// sutis. Verificado em código, antes de gastar uma chamada cara ao VERIFIER,
+// que reprovaria de qualquer forma em "barreirasAtendidas". Só exige
+// cobertura das técnicas TEXTUAIS da barreira — se todas as técnicas
+// indicadas forem apenas de layout, a barreira não entra nesta checagem.
 function encontrarBarreirasSemCobertura(barreiras: Barreira[], tecnicasAplicadas: string[]): Barreira[] {
   const aplicadas = new Set(tecnicasAplicadas)
-  return barreiras.filter(
-    (b) => b.tecnicas_indicadas.length > 0 && !b.tecnicas_indicadas.some((t) => aplicadas.has(t))
-  )
+  return barreiras.filter((b) => {
+    const textuais = tecnicasTextuaisIndicadas(b)
+    return textuais.length > 0 && !textuais.some((t) => aplicadas.has(t))
+  })
 }
 
 function montarMotivoCoberturaBarreiras(barreirasFaltantes: Barreira[]): string {
   return barreirasFaltantes
     .map(
       (b) =>
-        `A barreira ${b.codigo} (${b.nome_curto}) não teve nenhuma técnica sua aplicada. Técnicas esperadas para ela: ${b.tecnicas_indicadas.join(', ')}.`
+        `A barreira ${b.codigo} (${b.nome_curto}) não teve nenhuma técnica sua aplicada. Técnicas esperadas para ela: ${tecnicasTextuaisIndicadas(b).join(', ')}.`
     )
     .join(' ')
 }
