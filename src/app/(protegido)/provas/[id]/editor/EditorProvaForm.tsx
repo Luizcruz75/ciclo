@@ -11,6 +11,13 @@ import {
   gerarPdfAdaptacoes,
 } from './actions'
 
+// O ciclo ADAPTER<->VERIFIER pode levar até ~3 tentativas em série (o
+// servidor tem 300s de teto — ver page.tsx). 50s é bem abaixo disso: dá
+// tempo de sobra para o caso comum (1 tentativa) terminar sem aviso nenhum,
+// mas avisa o professor de que algo incomum está acontecendo bem antes do
+// teto real do servidor, em vez de deixar o spinner girando por até 5min.
+const AVISO_DEMORA_ADAPTACAO_MS = 50_000
+
 type Prova = { id: string; titulo: string; materia: string; ano_escolar: number }
 type Questao = {
   id: string
@@ -95,25 +102,32 @@ export function EditorProvaForm({
     setGerandoPdf(true)
     setErroPdf('')
 
-    const resposta = await gerarPdfAdaptacoes({ provaId: prova.id, alunoId: alunoSelecionadoId })
+    try {
+      const resposta = await gerarPdfAdaptacoes({ provaId: prova.id, alunoId: alunoSelecionadoId })
 
-    setGerandoPdf(false)
+      if (!resposta.sucesso) {
+        setErroPdf(resposta.erro)
+        return
+      }
 
-    if (!resposta.sucesso) {
-      setErroPdf(resposta.erro)
-      return
+      const bytes = Uint8Array.from(atob(resposta.pdfBase64), (c) => c.charCodeAt(0))
+      const blob = new Blob([bytes], { type: 'application/pdf' })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = resposta.nomeArquivo
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(url)
+    } catch {
+      // Sem isso, uma falha de rede/timeout na chamada deixa o botão
+      // girando pra sempre — o professor nunca vê erro nem consegue tentar
+      // de novo sem recarregar a página.
+      setErroPdf('Não foi possível gerar o PDF. Tente novamente.')
+    } finally {
+      setGerandoPdf(false)
     }
-
-    const bytes = Uint8Array.from(atob(resposta.pdfBase64), (c) => c.charCodeAt(0))
-    const blob = new Blob([bytes], { type: 'application/pdf' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = resposta.nomeArquivo
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    URL.revokeObjectURL(url)
   }
 
   function handleTrocarAluno(novoAlunoId: string) {
@@ -253,72 +267,108 @@ function QuestaoAdaptacao({
   const [textoEditado, setTextoEditado] = useState('')
   const [ultimoResultado, setUltimoResultado] = useState<ResultadoOrquestracao | null>(null)
   const [enviandoFeedback, setEnviandoFeedback] = useState(false)
+  const [demorandoMuito, setDemorandoMuito] = useState(false)
+
+  // Identifica cada chamada a handleAdaptar. Se o professor clicar em
+  // "Tentar novamente" enquanto uma tentativa anterior ainda está em voo
+  // (ela pode ter sido abandonada pela UI, mas o fetch em si não é
+  // cancelável de uma Server Action), o resultado atrasado da tentativa
+  // antiga é descartado em vez de sobrescrever o estado da tentativa atual.
+  const tentativaAdaptarIdRef = useRef(0)
 
   async function handleFeedback(funcionou: boolean) {
     if (!adaptacaoExistente) return
     setEnviandoFeedback(true)
     setErro('')
 
-    const resultado = await registrarEvidencia({
-      adaptacaoId: adaptacaoExistente.id,
-      alunoId,
-      funcionou,
-    })
+    try {
+      const resultado = await registrarEvidencia({
+        adaptacaoId: adaptacaoExistente.id,
+        alunoId,
+        funcionou,
+      })
 
-    setEnviandoFeedback(false)
+      if (!resultado.sucesso) {
+        setErro(resultado.erro)
+        return
+      }
 
-    if (!resultado.sucesso) {
-      setErro(resultado.erro)
-      return
+      onEvidenciaRegistrada(adaptacaoExistente.id, funcionou)
+    } catch {
+      setErro('Não foi possível registrar o feedback. Tente novamente.')
+    } finally {
+      setEnviandoFeedback(false)
     }
-
-    onEvidenciaRegistrada(adaptacaoExistente.id, funcionou)
   }
 
   async function handleAdaptar() {
     setErro('')
+    setDemorandoMuito(false)
     setCarregando(true)
 
-    const resposta = await adaptarQuestaoParaAluno({ questaoId: questao.id, alunoId })
+    const idTentativa = ++tentativaAdaptarIdRef.current
+    const avisoDemora = setTimeout(() => {
+      if (tentativaAdaptarIdRef.current === idTentativa) setDemorandoMuito(true)
+    }, AVISO_DEMORA_ADAPTACAO_MS)
 
-    setCarregando(false)
+    try {
+      const resposta = await adaptarQuestaoParaAluno({ questaoId: questao.id, alunoId })
 
-    if (!resposta.sucesso) {
-      setErro(resposta.erro)
-      return
+      // Uma tentativa mais nova já assumiu (o professor clicou em "Tentar
+      // novamente") — o resultado desta, agora atrasada, é descartado.
+      if (tentativaAdaptarIdRef.current !== idTentativa) return
+
+      if (!resposta.sucesso) {
+        setErro(resposta.erro)
+        return
+      }
+
+      setUltimoResultado(resposta.resultado)
+
+      // A Server Action já retorna sucesso:false quando o orquestrador falha
+      // tecnicamente; chegando aqui, resposta.resultado.sucesso é sempre
+      // true, mas o TypeScript exige o narrowing explícito do union type.
+      if (!resposta.resultado.sucesso) {
+        setErro('A adaptação não pôde ser gerada.')
+        return
+      }
+
+      const adaptacaoFinal = resposta.resultado.aprovado
+        ? resposta.resultado.adaptacao
+        : resposta.resultado.ultimaAdaptacao
+
+      if (!adaptacaoFinal) {
+        setErro('A adaptação não pôde ser gerada.')
+        return
+      }
+
+      onAdaptacaoGerada({
+        id: resposta.adaptacaoId,
+        questao_id: questao.id,
+        aluno_id: alunoId,
+        enunciado_adaptado: adaptacaoFinal.enunciadoAdaptado,
+        tecnicas_aplicadas: adaptacaoFinal.tecnicasAplicadas,
+        justificativa: adaptacaoFinal.justificativa,
+        verifier_aprovado: resposta.resultado.aprovado,
+        verifier_tentativas: resposta.resultado.tentativas.length,
+        verifier_alerta: resposta.resultado.aprovado ? null : resposta.resultado.alerta,
+        editado_pelo_professor: false,
+      })
+    } catch {
+      // Sem isso, um 504/erro de rede na chamada (ex: o antigo teto de 60s
+      // da function) deixa o spinner girando pra sempre — o professor nunca
+      // vê nenhuma mensagem nem consegue tentar de novo sem recarregar a
+      // página. Isso já aconteceu em produção.
+      if (tentativaAdaptarIdRef.current === idTentativa) {
+        setErro('Isso demorou mais que o esperado e não foi possível confirmar o resultado. Tente novamente.')
+      }
+    } finally {
+      clearTimeout(avisoDemora)
+      if (tentativaAdaptarIdRef.current === idTentativa) {
+        setCarregando(false)
+        setDemorandoMuito(false)
+      }
     }
-
-    setUltimoResultado(resposta.resultado)
-
-    // A Server Action já retorna sucesso:false quando o orquestrador falha
-    // tecnicamente; chegando aqui, resposta.resultado.sucesso é sempre
-    // true, mas o TypeScript exige o narrowing explícito do union type.
-    if (!resposta.resultado.sucesso) {
-      setErro('A adaptação não pôde ser gerada.')
-      return
-    }
-
-    const adaptacaoFinal = resposta.resultado.aprovado
-      ? resposta.resultado.adaptacao
-      : resposta.resultado.ultimaAdaptacao
-
-    if (!adaptacaoFinal) {
-      setErro('A adaptação não pôde ser gerada.')
-      return
-    }
-
-    onAdaptacaoGerada({
-      id: resposta.adaptacaoId,
-      questao_id: questao.id,
-      aluno_id: alunoId,
-      enunciado_adaptado: adaptacaoFinal.enunciadoAdaptado,
-      tecnicas_aplicadas: adaptacaoFinal.tecnicasAplicadas,
-      justificativa: adaptacaoFinal.justificativa,
-      verifier_aprovado: resposta.resultado.aprovado,
-      verifier_tentativas: resposta.resultado.tentativas.length,
-      verifier_alerta: resposta.resultado.aprovado ? null : resposta.resultado.alerta,
-      editado_pelo_professor: false,
-    })
   }
 
   function handleIniciarEdicao() {
@@ -338,25 +388,29 @@ function QuestaoAdaptacao({
     // precisar de um formato de diff binário complexo agora.
     const diff = `ANTES:\n${adaptacaoExistente.enunciado_adaptado}\n\nDEPOIS:\n${textoEditado}`
 
-    const resultado = await salvarEdicaoAdaptacao({
-      adaptacaoId: adaptacaoExistente.id,
-      enunciadoEditado: textoEditado,
-      diffEdicao: diff,
-    })
+    try {
+      const resultado = await salvarEdicaoAdaptacao({
+        adaptacaoId: adaptacaoExistente.id,
+        enunciadoEditado: textoEditado,
+        diffEdicao: diff,
+      })
 
-    setCarregando(false)
+      if (!resultado.sucesso) {
+        setErro(resultado.erro)
+        return
+      }
 
-    if (!resultado.sucesso) {
-      setErro(resultado.erro)
-      return
+      onAdaptacaoEditada({
+        ...adaptacaoExistente,
+        enunciado_adaptado: textoEditado,
+        editado_pelo_professor: true,
+      })
+      setEditando(false)
+    } catch {
+      setErro('Não foi possível salvar a edição. Tente novamente.')
+    } finally {
+      setCarregando(false)
     }
-
-    onAdaptacaoEditada({
-      ...adaptacaoExistente,
-      enunciado_adaptado: textoEditado,
-      editado_pelo_professor: true,
-    })
-    setEditando(false)
   }
 
   const alertaVermelho =
@@ -387,6 +441,8 @@ function QuestaoAdaptacao({
           Adaptar para este aluno
         </BotaoPrimario>
       )}
+
+      {carregando && demorandoMuito && <AvisoDemora onTentarNovamente={handleAdaptar} />}
 
       {erro && <MensagemErro texto={erro} />}
 
@@ -544,5 +600,21 @@ function MensagemErro({ texto }: { texto: string }) {
       <span aria-hidden>⚠</span>
       {texto}
     </p>
+  )
+}
+
+// Mostrado quando uma adaptação em andamento passa de AVISO_DEMORA_ADAPTACAO_MS
+// sem responder — nunca deixa o professor com um spinner girando sem
+// explicação nem saída. "Tentar novamente" só reinicia a chamada pelo lado
+// da UI (a tentativa antiga, se ainda resolver, é ignorada) — não existe
+// como cancelar de fato uma Server Action já em voo.
+function AvisoDemora({ onTentarNovamente }: { onTentarNovamente: () => void }) {
+  return (
+    <div className="mt-2">
+      <p className="text-sm text-texto-secundario mb-2">
+        Isso está demorando mais que o esperado. Você pode continuar aguardando ou tentar de novo.
+      </p>
+      <BotaoSecundario onClick={onTentarNovamente}>Tentar novamente</BotaoSecundario>
+    </div>
   )
 }
