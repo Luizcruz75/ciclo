@@ -50,12 +50,19 @@ export default function LoginPage() {
           {modo === 'login' ? 'Entrar no Ciclo' : 'Criar conta'}
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
           <input
             type="email"
             placeholder="Seu e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="off"
+            // readOnly até o primeiro foco: impede o navegador de autopreencher
+            // com a credencial do professor anterior assim que a tela carrega
+            // (foi visto acontecendo logo após "Sair") — o campo continua
+            // editável normalmente depois que o professor clica nele.
+            readOnly
+            onFocus={(e) => e.currentTarget.removeAttribute('readonly')}
             className="w-full h-11 border border-linha rounded-botao px-4 text-sm bg-superficie text-tinta focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15"
           />
           <input
@@ -63,6 +70,9 @@ export default function LoginPage() {
             placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            autoComplete="off"
+            readOnly
+            onFocus={(e) => e.currentTarget.removeAttribute('readonly')}
             className="w-full h-11 border border-linha rounded-botao px-4 text-sm bg-superficie text-tinta focus:outline-none focus:border-indigo focus:ring-2 focus:ring-indigo/15"
           />
 
